@@ -1369,5 +1369,22 @@ namespace sistema_reparto
         {
             Application.Exit();
         }
+
+        private void lblInventario_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmInventario obj = new frmInventario();
+            obj.Visible = true;
+            Visible = false;
+        }
+
+        private void lblInventario_MouseHover(object sender, EventArgs e)
+        {
+            btnInventario.BackColor = colorHoverBitaTrans;
+        }
+
+        private void lblInventario_MouseLeave(object sender, EventArgs e)
+        {
+            btnInventario.BackColor = colorNormalBitaTrans;
+        }
     }
 }

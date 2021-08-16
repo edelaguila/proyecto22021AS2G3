@@ -1,0 +1,20 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=AyudasSistemaReparto.chm
+Contents file=Ayudas.hhc
+Default Window=Ayudas Sistema Reparto
+Display compile progress=No
+Language=0x100a Español (Guatemala)
+
+[WINDOWS]
+Ayudas Sistema Reparto="Apartado de ayudas","Ayudas.hhc",,"ManualSistemaReparto.html","InicioSesionUsuario.html","ManualPanelPrincipal.html","ManualPanelPrincipal","ManualMantenimientos.html","ManualMantenimientos",0x23520,,0xc387e,,,,,,,,0
+
+
+[FILES]
+InicioSesionUsuario.html
+ManualMantenimientos.html
+ManualPanelPrincipal.html
+ManualSistemaReparto.html
+
+[INFOTYPES]
+

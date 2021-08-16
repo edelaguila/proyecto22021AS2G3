@@ -1354,5 +1354,57 @@ namespace sistema_reparto
         {
             Application.Exit();
         }
+
+        private void pnlPD_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPaqueteDetalle obj = new frmPaqueteDetalle();
+            obj.Visible = true;
+            Visible = false;
+        }
+
+        private void pnlPD_MouseHover(object sender, EventArgs e)
+        {
+            pnlPD.BackColor = colorHoverUbicacion;
+        }
+
+        private void pnlPD_MouseLeave(object sender, EventArgs e)
+        {
+            pnlPD.BackColor = colorNormalUbicacion;
+        }
+
+        private void pnlTrans_MouseClick_1(object sender, MouseEventArgs e)
+        {
+            frmTransporte obj = new frmTransporte();
+            obj.Visible = true;
+            Visible = false;
+
+        }
+
+        private void pnlTrans_MouseHover(object sender, EventArgs e)
+        {
+            pnlTrans.BackColor = colorHoverUbicacion;
+        }
+
+        private void pnlTrans_MouseLeave(object sender, EventArgs e)
+        {
+            pnlTrans.BackColor = colorNormalUbicacion;
+        }
+
+        private void btnInventario_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmInventario obj = new frmInventario();
+            obj.Visible = true;
+            Visible = false;
+        }
+
+        private void btnInventario_MouseHover(object sender, EventArgs e)
+        {
+            btnInventario.BackColor = colorHoverUbicacion;
+        }
+
+        private void btnInventario_MouseLeave(object sender, EventArgs e)
+        {
+            btnInventario.BackColor = colorNormalUbicacion;
+        }
     }
 }

@@ -148,8 +148,12 @@ namespace sistema_reparto
         {
             txtInventario.Text = "";
             txtMovBodega.Text = "";
+            
             cbxIdPaqueteEnc.SelectedIndex = 0;
+        
+           
             cbxIdBodega.SelectedIndex = 0;
+            
 
             txtFechaMobBod.Value = DateTime.Now;
         }
@@ -1351,6 +1355,57 @@ namespace sistema_reparto
         private void pnlCerrar_MouseClick(object sender, MouseEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void pnlPD_MouseHover(object sender, EventArgs e)
+        {
+            pnlPD.BackColor = colorHoverMovB;
+        }
+
+        private void pnlPD_MouseLeave(object sender, EventArgs e)
+        {
+            pnlPD.BackColor = colorNormalMovB;
+        }
+
+        private void pnlTrans_MouseHover(object sender, EventArgs e)
+        {
+            pnlTrans.BackColor = colorHoverMovB;
+        }
+
+        private void pnlTrans_MouseLeave(object sender, EventArgs e)
+        {
+            pnlTrans.BackColor = colorNormalMovB;
+        }
+
+        private void btnInventario_MouseHover(object sender, EventArgs e)
+        {
+            btnInventario.BackColor = colorHoverMovB;
+        }
+
+        private void btnInventario_MouseLeave(object sender, EventArgs e)
+        {
+            btnInventario.BackColor = colorNormalMovB;
+        }
+
+        private void pnlPD_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPaqueteDetalle obj = new frmPaqueteDetalle();
+            obj.Visible = true;
+            Visible = false;
+        }
+
+        private void pnlTrans_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmTransporte obj = new frmTransporte();
+            obj.Visible = true;
+            Visible = false;
+        }
+
+        private void btnInventario_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmInventario obj = new frmInventario();
+            obj.Visible = true;
+            Visible = false;
         }
         /* Final funcion para cargar mi tabla de Inventario */
 

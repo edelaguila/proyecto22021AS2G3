@@ -1616,6 +1616,63 @@ namespace sistema_reparto
 
             Visible = false;
         }
+
+        private void pnlPD_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPaqueteDetalle obj = new frmPaqueteDetalle();
+            obj.Visible = true;
+            Visible = false;
+
+        }
+
+        private void pnlPD_MouseHover(object sender, EventArgs e)
+        {
+            pnlPD.BackColor = colorHoverCliente;
+        }
+
+        private void pnlPD_MouseLeave(object sender, EventArgs e)
+        {
+            pnlPD.BackColor = colorNormalCliente;
+        }
+
+        private void pnlTrans_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmTransporte obj = new frmTransporte();
+            obj.Visible = true;
+            Visible = false;
+        }
+
+        private void pnlTrans_MouseHover(object sender, EventArgs e)
+        {
+            pnlTrans.BackColor = colorHoverCliente;
+        }
+
+        private void pnlTrans_MouseLeave(object sender, EventArgs e)
+        {
+            pnlTrans.BackColor = colorNormalCliente;
+        }
+
+        private void btnInventario_MouseClick_1(object sender, MouseEventArgs e)
+        {
+            frmInventario obj = new frmInventario();
+            obj.Visible = true;
+            Visible = false;
+        }
+
+        private void btnInventario_MouseHover(object sender, EventArgs e)
+        {
+            btnInventario.BackColor = colorHoverCliente;
+        }
+
+        private void btnInventario_MouseLeave(object sender, EventArgs e)
+        {
+            btnInventario.BackColor = colorNormalCliente;
+        }
+
+        private void panel3_MouseClick_2(object sender, MouseEventArgs e)
+        {
+            Help.ShowHelp(this, "AyudasSistemaReparto/AyudasSistemaReparto.chm", "ManualSistemaReparto.html");
+        }
     }
     
     

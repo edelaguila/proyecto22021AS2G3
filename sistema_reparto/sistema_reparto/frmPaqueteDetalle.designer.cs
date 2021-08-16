@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPaqueteDetalle));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlPD = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -43,11 +43,6 @@
             this.pnlBotonBuscarPD = new System.Windows.Forms.Panel();
             this.txtBuscarPD = new System.Windows.Forms.TextBox();
             this.dgvPD = new System.Windows.Forms.DataGridView();
-            this.idPaqueteEncabezadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idOrdenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paqueteDetalleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlBotonGuardarPD = new System.Windows.Forms.Panel();
             this.pnlCampoDP = new System.Windows.Forms.Panel();
@@ -76,6 +71,10 @@
             this.lblModificarPaqDet = new System.Windows.Forms.Label();
             this.pnlEliminar = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnInventario = new System.Windows.Forms.Panel();
+            this.lblInventario = new System.Windows.Forms.Label();
+            this.picIconoInventario = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnBitaTrans = new System.Windows.Forms.Panel();
             this.lblBitaTrans = new System.Windows.Forms.Label();
             this.picIconoBitaTrans = new System.Windows.Forms.PictureBox();
@@ -155,6 +154,11 @@
             this.pnlImagenU = new System.Windows.Forms.Panel();
             this.lblUsuarioLog = new System.Windows.Forms.Label();
             this.pnlCerrar = new System.Windows.Forms.Panel();
+            this.idPaqueteEncabezadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idOrdenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlPD.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPD)).BeginInit();
@@ -166,6 +170,8 @@
             this.pnlCampoIDPE.SuspendLayout();
             this.pnlBordePaqDet.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.btnInventario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconoInventario)).BeginInit();
             this.btnBitaTrans.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoBitaTrans)).BeginInit();
             this.pnlMovBodega.SuspendLayout();
@@ -298,46 +304,16 @@
             resources.ApplyResources(this.dgvPD, "dgvPD");
             this.dgvPD.Name = "dgvPD";
             this.dgvPD.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPD.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            this.dgvPD.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            // 
-            // idPaqueteEncabezadoDataGridViewTextBoxColumn
-            // 
-            this.idPaqueteEncabezadoDataGridViewTextBoxColumn.DataPropertyName = "IdPaqueteEncabezado";
-            resources.ApplyResources(this.idPaqueteEncabezadoDataGridViewTextBoxColumn, "idPaqueteEncabezadoDataGridViewTextBoxColumn");
-            this.idPaqueteEncabezadoDataGridViewTextBoxColumn.Name = "idPaqueteEncabezadoDataGridViewTextBoxColumn";
-            // 
-            // idClienteDataGridViewTextBoxColumn
-            // 
-            this.idClienteDataGridViewTextBoxColumn.DataPropertyName = "IdCliente";
-            resources.ApplyResources(this.idClienteDataGridViewTextBoxColumn, "idClienteDataGridViewTextBoxColumn");
-            this.idClienteDataGridViewTextBoxColumn.Name = "idClienteDataGridViewTextBoxColumn";
-            // 
-            // idEmpleadoDataGridViewTextBoxColumn
-            // 
-            this.idEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "IdEmpleado";
-            resources.ApplyResources(this.idEmpleadoDataGridViewTextBoxColumn, "idEmpleadoDataGridViewTextBoxColumn");
-            this.idEmpleadoDataGridViewTextBoxColumn.Name = "idEmpleadoDataGridViewTextBoxColumn";
-            // 
-            // idOrdenDataGridViewTextBoxColumn
-            // 
-            this.idOrdenDataGridViewTextBoxColumn.DataPropertyName = "IdOrden";
-            resources.ApplyResources(this.idOrdenDataGridViewTextBoxColumn, "idOrdenDataGridViewTextBoxColumn");
-            this.idOrdenDataGridViewTextBoxColumn.Name = "idOrdenDataGridViewTextBoxColumn";
-            // 
-            // descripcionProductoDataGridViewTextBoxColumn
-            // 
-            this.descripcionProductoDataGridViewTextBoxColumn.DataPropertyName = "DescripcionProducto";
-            resources.ApplyResources(this.descripcionProductoDataGridViewTextBoxColumn, "descripcionProductoDataGridViewTextBoxColumn");
-            this.descripcionProductoDataGridViewTextBoxColumn.Name = "descripcionProductoDataGridViewTextBoxColumn";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPD.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.dgvPD.RowsDefaultCellStyle = dataGridViewCellStyle2;
             // 
             // paqueteDetalleBindingSource
             // 
@@ -513,6 +489,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
             resources.ApplyResources(this.panel3, "panel3");
+            this.panel3.Controls.Add(this.btnInventario);
             this.panel3.Controls.Add(this.btnBitaTrans);
             this.panel3.Controls.Add(this.pnlMovBodega);
             this.panel3.Controls.Add(this.btnPiloto);
@@ -532,6 +509,42 @@
             this.panel3.Controls.Add(this.pnlCliente);
             this.panel3.Controls.Add(this.pnlEnvio);
             this.panel3.Name = "panel3";
+            // 
+            // btnInventario
+            // 
+            this.btnInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.btnInventario.Controls.Add(this.lblInventario);
+            this.btnInventario.Controls.Add(this.picIconoInventario);
+            this.btnInventario.Controls.Add(this.label3);
+            this.btnInventario.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btnInventario, "btnInventario");
+            this.btnInventario.Name = "btnInventario";
+            this.btnInventario.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnInventario_MouseClick);
+            this.btnInventario.MouseLeave += new System.EventHandler(this.btnInventario_MouseLeave);
+            this.btnInventario.MouseHover += new System.EventHandler(this.btnInventario_MouseHover);
+            // 
+            // lblInventario
+            // 
+            resources.ApplyResources(this.lblInventario, "lblInventario");
+            this.lblInventario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblInventario.Name = "lblInventario";
+            this.lblInventario.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnInventario_MouseClick);
+            this.lblInventario.MouseLeave += new System.EventHandler(this.btnInventario_MouseLeave);
+            this.lblInventario.MouseHover += new System.EventHandler(this.btnInventario_MouseHover);
+            // 
+            // picIconoInventario
+            // 
+            resources.ApplyResources(this.picIconoInventario, "picIconoInventario");
+            this.picIconoInventario.Name = "picIconoInventario";
+            this.picIconoInventario.TabStop = false;
+            this.picIconoInventario.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnInventario_MouseClick);
+            this.picIconoInventario.MouseLeave += new System.EventHandler(this.btnInventario_MouseLeave);
+            this.picIconoInventario.MouseHover += new System.EventHandler(this.btnInventario_MouseHover);
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
             // 
             // btnBitaTrans
             // 
@@ -1215,6 +1228,36 @@
             this.pnlCerrar.Name = "pnlCerrar";
             this.pnlCerrar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlCerrar_MouseClick);
             // 
+            // idPaqueteEncabezadoDataGridViewTextBoxColumn
+            // 
+            this.idPaqueteEncabezadoDataGridViewTextBoxColumn.DataPropertyName = "IdPaqueteEncabezado";
+            resources.ApplyResources(this.idPaqueteEncabezadoDataGridViewTextBoxColumn, "idPaqueteEncabezadoDataGridViewTextBoxColumn");
+            this.idPaqueteEncabezadoDataGridViewTextBoxColumn.Name = "idPaqueteEncabezadoDataGridViewTextBoxColumn";
+            // 
+            // idClienteDataGridViewTextBoxColumn
+            // 
+            this.idClienteDataGridViewTextBoxColumn.DataPropertyName = "IdCliente";
+            resources.ApplyResources(this.idClienteDataGridViewTextBoxColumn, "idClienteDataGridViewTextBoxColumn");
+            this.idClienteDataGridViewTextBoxColumn.Name = "idClienteDataGridViewTextBoxColumn";
+            // 
+            // idEmpleadoDataGridViewTextBoxColumn
+            // 
+            this.idEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "IdEmpleado";
+            resources.ApplyResources(this.idEmpleadoDataGridViewTextBoxColumn, "idEmpleadoDataGridViewTextBoxColumn");
+            this.idEmpleadoDataGridViewTextBoxColumn.Name = "idEmpleadoDataGridViewTextBoxColumn";
+            // 
+            // idOrdenDataGridViewTextBoxColumn
+            // 
+            this.idOrdenDataGridViewTextBoxColumn.DataPropertyName = "IdOrden";
+            resources.ApplyResources(this.idOrdenDataGridViewTextBoxColumn, "idOrdenDataGridViewTextBoxColumn");
+            this.idOrdenDataGridViewTextBoxColumn.Name = "idOrdenDataGridViewTextBoxColumn";
+            // 
+            // descripcionProductoDataGridViewTextBoxColumn
+            // 
+            this.descripcionProductoDataGridViewTextBoxColumn.DataPropertyName = "DescripcionProducto";
+            resources.ApplyResources(this.descripcionProductoDataGridViewTextBoxColumn, "descripcionProductoDataGridViewTextBoxColumn");
+            this.descripcionProductoDataGridViewTextBoxColumn.Name = "descripcionProductoDataGridViewTextBoxColumn";
+            // 
             // frmPaqueteDetalle
             // 
             resources.ApplyResources(this, "$this");
@@ -1271,6 +1314,9 @@
             this.pnlCampoIDPE.PerformLayout();
             this.pnlBordePaqDet.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.btnInventario.ResumeLayout(false);
+            this.btnInventario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconoInventario)).EndInit();
             this.btnBitaTrans.ResumeLayout(false);
             this.btnBitaTrans.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoBitaTrans)).EndInit();
@@ -1369,11 +1415,6 @@
         private System.Windows.Forms.ComboBox cbxIdCliente;
         private System.Windows.Forms.ComboBox cbxPE;
         private System.Windows.Forms.Panel pnlEliminar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idPaqueteEncabezadoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idClienteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idEmpleadoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idOrdenDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionProductoDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource paqueteDetalleBindingSource;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel pnlBodega;
@@ -1455,5 +1496,14 @@
         private System.Windows.Forms.Panel pnlImagenU;
         private System.Windows.Forms.Label lblUsuarioLog;
         private System.Windows.Forms.Panel pnlCerrar;
+        private System.Windows.Forms.Panel btnInventario;
+        private System.Windows.Forms.Label lblInventario;
+        private System.Windows.Forms.PictureBox picIconoInventario;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idPaqueteEncabezadoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idClienteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idEmpleadoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idOrdenDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionProductoDataGridViewTextBoxColumn;
     }
 }

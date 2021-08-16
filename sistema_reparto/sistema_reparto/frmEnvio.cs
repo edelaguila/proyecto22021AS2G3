@@ -1692,6 +1692,46 @@ namespace sistema_reparto
         {
             Application.Exit();
         }
+
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+        }
+
+        private void pnlPD_MouseHover(object sender, EventArgs e)
+        {
+            pnlPD.BackColor = colorHoverEnvio;
+        }
+
+        private void pnlPD_MouseLeave(object sender, EventArgs e)
+        {
+            pnlPD.BackColor = colorNormalEnvio;
+        }
+
+        private void pnlTrans_MouseHover(object sender, EventArgs e)
+        {
+            pnlTrans.BackColor = colorHoverEnvio;
+        }
+
+        private void pnlTrans_MouseLeave(object sender, EventArgs e)
+        {
+            pnlTrans.BackColor = colorNormalEnvio;
+        }
+
+        private void pnlPD_MouseClick(object sender, MouseEventArgs e)
+        {
+
+            frmPaqueteDetalle obj = new frmPaqueteDetalle();
+            obj.Visible = true;
+            Visible = false;
+        }
+
+        private void pnlTrans_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmTransporte obj = new frmTransporte();
+            obj.Visible = true;
+            Visible = false;
+        }
         /* Final funcion para cargar mi tabla de Ruta */
     }
 }

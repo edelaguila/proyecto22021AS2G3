@@ -1070,13 +1070,6 @@ namespace sistema_reparto
             Visible = false;
         }
 
-        private void pnlTrans_MouseClick(object sender, MouseEventArgs e)
-        {
-            frmPuestos obj = new frmPuestos();
-            obj.Visible = true;
-            Visible = false;
-        }
-
         private void pnlMovBodega_MouseClick(object sender, MouseEventArgs e)
         {
             frmMovimientoBodega movBodega = new frmMovimientoBodega();
@@ -1333,6 +1326,57 @@ namespace sistema_reparto
         private void pnlCerrar_MouseClick(object sender, MouseEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void pnlPD_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPaqueteDetalle obj = new frmPaqueteDetalle();
+            obj.Visible = true;
+            Visible = false;
+        }
+
+        private void pnlPD_MouseHover(object sender, EventArgs e)
+        {
+            pnlPD.BackColor = colorHoverPuesto;
+        }
+
+        private void pnlPD_MouseLeave(object sender, EventArgs e)
+        {
+            pnlPD.BackColor = colorNormalPuesto;
+        }
+
+        private void pnlTrans_MouseHover(object sender, EventArgs e)
+        {
+            pnlTrans.BackColor = colorHoverPuesto;
+        }
+
+        private void pnlTrans_MouseLeave(object sender, EventArgs e)
+        {
+            pnlTrans.BackColor = colorNormalPuesto;
+        }
+
+        private void pnlTrans_MouseClick_1(object sender, MouseEventArgs e)
+        {
+            frmTransporte obj = new frmTransporte();
+            obj.Visible = true;
+            Visible = false;
+        }
+
+        private void btnInventario_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmInventario obj = new frmInventario();
+            obj.Visible = true;
+            Visible = false;
+        }
+
+        private void btnInventario_MouseHover(object sender, EventArgs e)
+        {
+            btnInventario.BackColor = colorHoverPuesto;
+        }
+
+        private void btnInventario_MouseLeave(object sender, EventArgs e)
+        {
+            btnInventario.BackColor = colorNormalPuesto;
         }
     }
         /* Final Llenando campos de mi busqueda en la tabla */

@@ -14,7 +14,7 @@ namespace sistema_reparto
             String servidor = "localhost";
             String bd = "sistemarepartobd";
             String usuario = "root";
-            String password = "root";
+            String password = "jorgito5828H";
 
             String cadenaConexion = "Database=" + bd + "; Data Source=" + servidor + "; User Id= " + usuario +
             "; Password=" + password + ";";

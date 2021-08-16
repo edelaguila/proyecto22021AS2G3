@@ -29,14 +29,27 @@ namespace sistema_reparto
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInventario));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlSidebar = new System.Windows.Forms.Panel();
+            this.pnlTrans = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.btnInventario = new System.Windows.Forms.Panel();
+            this.lblInventario = new System.Windows.Forms.Label();
+            this.picIconoInventario = new System.Windows.Forms.PictureBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.btnBitaTrans = new System.Windows.Forms.Panel();
             this.lblBitaTrans = new System.Windows.Forms.Label();
             this.picIconoBitaTrans = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.pnlPD = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.lblPaqDet = new System.Windows.Forms.Label();
             this.btnCalificacionP = new System.Windows.Forms.Panel();
             this.picCalificacion = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -102,20 +115,36 @@ namespace sistema_reparto
             this.lblTipoTransporte = new System.Windows.Forms.Label();
             this.picIconoTipoTransporte = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnInventario = new System.Windows.Forms.Panel();
-            this.lblInventario = new System.Windows.Forms.Label();
-            this.picIconoInventario = new System.Windows.Forms.PictureBox();
-            this.label20 = new System.Windows.Forms.Label();
             this.lblTituloInventario = new System.Windows.Forms.Label();
             this.pnlBordeInventario = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblVistaInventario = new System.Windows.Forms.Label();
             this.pnlBotonBuscarInventario = new System.Windows.Forms.Panel();
             this.txtBuscarInventario = new System.Windows.Forms.TextBox();
-            this.dgvInventario = new System.Windows.Forms.DataGridView();
+            this.dgvVista = new System.Windows.Forms.DataGridView();
+            this.inventarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pnlCerrar = new System.Windows.Forms.Panel();
+            this.txtIdUsu = new System.Windows.Forms.TextBox();
+            this.lblCodigoUsu = new System.Windows.Forms.Label();
+            this.txtNombreUsu = new System.Windows.Forms.TextBox();
+            this.pnlImagenU = new System.Windows.Forms.Panel();
+            this.lblUsuarioLog = new System.Windows.Forms.Label();
+            this.idInventarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idBodegaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idPaqueteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlSidebar.SuspendLayout();
+            this.pnlTrans.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.btnInventario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconoInventario)).BeginInit();
             this.btnBitaTrans.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoBitaTrans)).BeginInit();
+            this.pnlPD.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.btnCalificacionP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCalificacion)).BeginInit();
             this.btnPiloto.SuspendLayout();
@@ -149,10 +178,9 @@ namespace sistema_reparto
             ((System.ComponentModel.ISupportInitialize)(this.picIconoCliente)).BeginInit();
             this.btnTipoTransporte.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoTipoTransporte)).BeginInit();
-            this.btnInventario.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picIconoInventario)).BeginInit();
             this.pnlBordeInventario.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVista)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSidebar
@@ -160,8 +188,10 @@ namespace sistema_reparto
             this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
             this.pnlSidebar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlSidebar.BackgroundImage")));
             this.pnlSidebar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlSidebar.Controls.Add(this.pnlTrans);
             this.pnlSidebar.Controls.Add(this.btnInventario);
             this.pnlSidebar.Controls.Add(this.btnBitaTrans);
+            this.pnlSidebar.Controls.Add(this.pnlPD);
             this.pnlSidebar.Controls.Add(this.btnCalificacionP);
             this.pnlSidebar.Controls.Add(this.btnPiloto);
             this.pnlSidebar.Controls.Add(this.btnBodega);
@@ -180,8 +210,110 @@ namespace sistema_reparto
             this.pnlSidebar.Controls.Add(this.btnTipoTransporte);
             this.pnlSidebar.Location = new System.Drawing.Point(0, 0);
             this.pnlSidebar.Name = "pnlSidebar";
-            this.pnlSidebar.Size = new System.Drawing.Size(179, 759);
+            this.pnlSidebar.Size = new System.Drawing.Size(179, 784);
             this.pnlSidebar.TabIndex = 1;
+            // 
+            // pnlTrans
+            // 
+            this.pnlTrans.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.pnlTrans.Controls.Add(this.pictureBox6);
+            this.pnlTrans.Controls.Add(this.label25);
+            this.pnlTrans.Controls.Add(this.label26);
+            this.pnlTrans.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlTrans.Location = new System.Drawing.Point(0, 575);
+            this.pnlTrans.Name = "pnlTrans";
+            this.pnlTrans.Size = new System.Drawing.Size(180, 34);
+            this.pnlTrans.TabIndex = 359;
+            this.pnlTrans.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlTrans_MouseClick);
+            this.pnlTrans.MouseLeave += new System.EventHandler(this.pnlTrans_MouseLeave);
+            this.pnlTrans.MouseHover += new System.EventHandler(this.pnlTrans_MouseHover);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox6.Location = new System.Drawing.Point(19, 8);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(20, 21);
+            this.pictureBox6.TabIndex = 1;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlTrans_MouseClick);
+            this.pictureBox6.MouseLeave += new System.EventHandler(this.pnlTrans_MouseLeave);
+            this.pictureBox6.MouseHover += new System.EventHandler(this.pnlTrans_MouseHover);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Image = ((System.Drawing.Image)(resources.GetObject("label25.Image")));
+            this.label25.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label25.Location = new System.Drawing.Point(15, 10);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(0, 13);
+            this.label25.TabIndex = 1;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.854546F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.label26.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label26.Location = new System.Drawing.Point(77, 10);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(58, 13);
+            this.label26.TabIndex = 0;
+            this.label26.Text = "Transporte";
+            this.label26.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlTrans_MouseClick);
+            this.label26.MouseLeave += new System.EventHandler(this.pnlTrans_MouseLeave);
+            this.label26.MouseHover += new System.EventHandler(this.pnlTrans_MouseHover);
+            // 
+            // btnInventario
+            // 
+            this.btnInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.btnInventario.Controls.Add(this.lblInventario);
+            this.btnInventario.Controls.Add(this.picIconoInventario);
+            this.btnInventario.Controls.Add(this.label20);
+            this.btnInventario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInventario.Location = new System.Drawing.Point(-8, 740);
+            this.btnInventario.Name = "btnInventario";
+            this.btnInventario.Size = new System.Drawing.Size(189, 34);
+            this.btnInventario.TabIndex = 24;
+            this.btnInventario.MouseLeave += new System.EventHandler(this.btnInventario_MouseLeave);
+            this.btnInventario.MouseHover += new System.EventHandler(this.btnInventario_MouseHover);
+            // 
+            // lblInventario
+            // 
+            this.lblInventario.AutoSize = true;
+            this.lblInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInventario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblInventario.Location = new System.Drawing.Point(75, 10);
+            this.lblInventario.Name = "lblInventario";
+            this.lblInventario.Size = new System.Drawing.Size(60, 15);
+            this.lblInventario.TabIndex = 2;
+            this.lblInventario.Text = "Inventario";
+            this.lblInventario.MouseLeave += new System.EventHandler(this.lblInventario_MouseLeave);
+            this.lblInventario.MouseHover += new System.EventHandler(this.lblInventario_MouseHover);
+            // 
+            // picIconoInventario
+            // 
+            this.picIconoInventario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picIconoInventario.BackgroundImage")));
+            this.picIconoInventario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picIconoInventario.Location = new System.Drawing.Point(26, 8);
+            this.picIconoInventario.Name = "picIconoInventario";
+            this.picIconoInventario.Size = new System.Drawing.Size(20, 21);
+            this.picIconoInventario.TabIndex = 1;
+            this.picIconoInventario.TabStop = false;
+            this.picIconoInventario.MouseLeave += new System.EventHandler(this.picIconoInventario_MouseLeave);
+            this.picIconoInventario.MouseHover += new System.EventHandler(this.picIconoInventario_MouseHover);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Image = ((System.Drawing.Image)(resources.GetObject("label20.Image")));
+            this.label20.Location = new System.Drawing.Point(17, 10);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(0, 13);
+            this.label20.TabIndex = 1;
             // 
             // btnBitaTrans
             // 
@@ -190,7 +322,7 @@ namespace sistema_reparto
             this.btnBitaTrans.Controls.Add(this.picIconoBitaTrans);
             this.btnBitaTrans.Controls.Add(this.label11);
             this.btnBitaTrans.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBitaTrans.Location = new System.Drawing.Point(-8, 672);
+            this.btnBitaTrans.Location = new System.Drawing.Point(-8, 707);
             this.btnBitaTrans.Name = "btnBitaTrans";
             this.btnBitaTrans.Size = new System.Drawing.Size(189, 34);
             this.btnBitaTrans.TabIndex = 23;
@@ -234,6 +366,60 @@ namespace sistema_reparto
             this.label11.Size = new System.Drawing.Size(0, 13);
             this.label11.TabIndex = 1;
             // 
+            // pnlPD
+            // 
+            this.pnlPD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.pnlPD.Controls.Add(this.pictureBox5);
+            this.pnlPD.Controls.Add(this.label24);
+            this.pnlPD.Controls.Add(this.lblPaqDet);
+            this.pnlPD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlPD.Location = new System.Drawing.Point(-3, 445);
+            this.pnlPD.Name = "pnlPD";
+            this.pnlPD.Size = new System.Drawing.Size(180, 34);
+            this.pnlPD.TabIndex = 358;
+            this.pnlPD.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlPD_MouseClick);
+            this.pnlPD.MouseLeave += new System.EventHandler(this.pnlPD_MouseLeave);
+            this.pnlPD.MouseHover += new System.EventHandler(this.pnlPD_MouseHover);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox5.Location = new System.Drawing.Point(18, 8);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(20, 21);
+            this.pictureBox5.TabIndex = 1;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlPD_MouseClick);
+            this.pictureBox5.MouseLeave += new System.EventHandler(this.pnlPD_MouseLeave);
+            this.pictureBox5.MouseHover += new System.EventHandler(this.pnlPD_MouseHover);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Image = ((System.Drawing.Image)(resources.GetObject("label24.Image")));
+            this.label24.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label24.Location = new System.Drawing.Point(15, 10);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(0, 13);
+            this.label24.TabIndex = 1;
+            // 
+            // lblPaqDet
+            // 
+            this.lblPaqDet.AutoSize = true;
+            this.lblPaqDet.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.854546F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaqDet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblPaqDet.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblPaqDet.Location = new System.Drawing.Point(58, 10);
+            this.lblPaqDet.Name = "lblPaqDet";
+            this.lblPaqDet.Size = new System.Drawing.Size(83, 13);
+            this.lblPaqDet.TabIndex = 0;
+            this.lblPaqDet.Text = "Paquete Detalle";
+            this.lblPaqDet.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlPD_MouseClick);
+            this.lblPaqDet.MouseLeave += new System.EventHandler(this.pnlPD_MouseLeave);
+            this.lblPaqDet.MouseHover += new System.EventHandler(this.pnlPD_MouseHover);
+            // 
             // btnCalificacionP
             // 
             this.btnCalificacionP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
@@ -241,7 +427,7 @@ namespace sistema_reparto
             this.btnCalificacionP.Controls.Add(this.label7);
             this.btnCalificacionP.Controls.Add(this.lblCalificacion);
             this.btnCalificacionP.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCalificacionP.Location = new System.Drawing.Point(-1, 606);
+            this.btnCalificacionP.Location = new System.Drawing.Point(-1, 641);
             this.btnCalificacionP.Name = "btnCalificacionP";
             this.btnCalificacionP.Size = new System.Drawing.Size(180, 34);
             this.btnCalificacionP.TabIndex = 37;
@@ -293,7 +479,7 @@ namespace sistema_reparto
             this.btnPiloto.Controls.Add(this.picIconoPiloto);
             this.btnPiloto.Controls.Add(this.label15);
             this.btnPiloto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPiloto.Location = new System.Drawing.Point(-8, 639);
+            this.btnPiloto.Location = new System.Drawing.Point(-8, 674);
             this.btnPiloto.Name = "btnPiloto";
             this.btnPiloto.Size = new System.Drawing.Size(189, 34);
             this.btnPiloto.TabIndex = 22;
@@ -344,7 +530,7 @@ namespace sistema_reparto
             this.btnBodega.Controls.Add(this.label16);
             this.btnBodega.Controls.Add(this.lblBodega);
             this.btnBodega.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBodega.Location = new System.Drawing.Point(-4, 507);
+            this.btnBodega.Location = new System.Drawing.Point(-4, 510);
             this.btnBodega.Name = "btnBodega";
             this.btnBodega.Size = new System.Drawing.Size(185, 34);
             this.btnBodega.TabIndex = 36;
@@ -396,7 +582,7 @@ namespace sistema_reparto
             this.pnlEmpleado.Controls.Add(this.label14);
             this.pnlEmpleado.Controls.Add(this.lblEmple);
             this.pnlEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlEmpleado.Location = new System.Drawing.Point(-2, 474);
+            this.pnlEmpleado.Location = new System.Drawing.Point(-2, 477);
             this.pnlEmpleado.Name = "pnlEmpleado";
             this.pnlEmpleado.Size = new System.Drawing.Size(180, 34);
             this.pnlEmpleado.TabIndex = 34;
@@ -446,7 +632,7 @@ namespace sistema_reparto
             this.btnUbicacion.Controls.Add(this.picIconoUbicacion);
             this.btnUbicacion.Controls.Add(this.label5);
             this.btnUbicacion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUbicacion.Location = new System.Drawing.Point(-2, 276);
+            this.btnUbicacion.Location = new System.Drawing.Point(-2, 249);
             this.btnUbicacion.Name = "btnUbicacion";
             this.btnUbicacion.Size = new System.Drawing.Size(180, 34);
             this.btnUbicacion.TabIndex = 4;
@@ -496,7 +682,7 @@ namespace sistema_reparto
             this.pnlEnvio.Controls.Add(this.label19);
             this.pnlEnvio.Controls.Add(this.lblEnvio);
             this.pnlEnvio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlEnvio.Location = new System.Drawing.Point(0, 573);
+            this.pnlEnvio.Location = new System.Drawing.Point(0, 608);
             this.pnlEnvio.Name = "pnlEnvio";
             this.pnlEnvio.Size = new System.Drawing.Size(180, 34);
             this.pnlEnvio.TabIndex = 40;
@@ -547,7 +733,7 @@ namespace sistema_reparto
             this.btnRuta.Controls.Add(this.label8);
             this.btnRuta.Controls.Add(this.lblRuta);
             this.btnRuta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRuta.Location = new System.Drawing.Point(1, 309);
+            this.btnRuta.Location = new System.Drawing.Point(1, 282);
             this.btnRuta.Name = "btnRuta";
             this.btnRuta.Size = new System.Drawing.Size(180, 34);
             this.btnRuta.TabIndex = 6;
@@ -597,7 +783,7 @@ namespace sistema_reparto
             this.btnPaqueteEncabezado.Controls.Add(this.picIconoPaqueteE);
             this.btnPaqueteEncabezado.Controls.Add(this.label13);
             this.btnPaqueteEncabezado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPaqueteEncabezado.Location = new System.Drawing.Point(-6, 441);
+            this.btnPaqueteEncabezado.Location = new System.Drawing.Point(-6, 414);
             this.btnPaqueteEncabezado.Name = "btnPaqueteEncabezado";
             this.btnPaqueteEncabezado.Size = new System.Drawing.Size(189, 34);
             this.btnPaqueteEncabezado.TabIndex = 33;
@@ -648,7 +834,7 @@ namespace sistema_reparto
             this.pnlMovBodega.Controls.Add(this.label18);
             this.pnlMovBodega.Controls.Add(this.lblMovimientoBodega);
             this.pnlMovBodega.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlMovBodega.Location = new System.Drawing.Point(-2, 540);
+            this.pnlMovBodega.Location = new System.Drawing.Point(-2, 543);
             this.pnlMovBodega.Name = "pnlMovBodega";
             this.pnlMovBodega.Size = new System.Drawing.Size(180, 34);
             this.pnlMovBodega.TabIndex = 39;
@@ -698,7 +884,7 @@ namespace sistema_reparto
             this.btnDepartamento.Controls.Add(this.picDepartamento);
             this.btnDepartamento.Controls.Add(this.label4);
             this.btnDepartamento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDepartamento.Location = new System.Drawing.Point(-2, 243);
+            this.btnDepartamento.Location = new System.Drawing.Point(-2, 216);
             this.btnDepartamento.Name = "btnDepartamento";
             this.btnDepartamento.Size = new System.Drawing.Size(180, 34);
             this.btnDepartamento.TabIndex = 3;
@@ -749,7 +935,7 @@ namespace sistema_reparto
             this.pnlSubUbicacion.Controls.Add(this.label10);
             this.pnlSubUbicacion.Controls.Add(this.lblSubUbicacion);
             this.pnlSubUbicacion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlSubUbicacion.Location = new System.Drawing.Point(0, 342);
+            this.pnlSubUbicacion.Location = new System.Drawing.Point(0, 315);
             this.pnlSubUbicacion.Name = "pnlSubUbicacion";
             this.pnlSubUbicacion.Size = new System.Drawing.Size(180, 34);
             this.pnlSubUbicacion.TabIndex = 8;
@@ -800,7 +986,7 @@ namespace sistema_reparto
             this.btnPuesto.Controls.Add(this.label2);
             this.btnPuesto.Controls.Add(this.lblPuesto);
             this.btnPuesto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPuesto.Location = new System.Drawing.Point(-3, 210);
+            this.btnPuesto.Location = new System.Drawing.Point(-3, 183);
             this.btnPuesto.Name = "btnPuesto";
             this.btnPuesto.Size = new System.Drawing.Size(180, 34);
             this.btnPuesto.TabIndex = 2;
@@ -850,7 +1036,7 @@ namespace sistema_reparto
             this.btnUsuarios.Controls.Add(this.picIconoUsuarios);
             this.btnUsuarios.Controls.Add(this.label12);
             this.btnUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUsuarios.Location = new System.Drawing.Point(-2, 408);
+            this.btnUsuarios.Location = new System.Drawing.Point(-2, 381);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(180, 34);
             this.btnUsuarios.TabIndex = 32;
@@ -914,7 +1100,7 @@ namespace sistema_reparto
             this.btnCliente.Controls.Add(this.label1);
             this.btnCliente.Controls.Add(this.lblCliente);
             this.btnCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCliente.Location = new System.Drawing.Point(-1, 177);
+            this.btnCliente.Location = new System.Drawing.Point(-1, 150);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Size = new System.Drawing.Size(180, 34);
             this.btnCliente.TabIndex = 1;
@@ -1005,7 +1191,7 @@ namespace sistema_reparto
             this.btnTipoTransporte.Controls.Add(this.picIconoTipoTransporte);
             this.btnTipoTransporte.Controls.Add(this.label9);
             this.btnTipoTransporte.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTipoTransporte.Location = new System.Drawing.Point(0, 375);
+            this.btnTipoTransporte.Location = new System.Drawing.Point(0, 348);
             this.btnTipoTransporte.Name = "btnTipoTransporte";
             this.btnTipoTransporte.Size = new System.Drawing.Size(178, 34);
             this.btnTipoTransporte.TabIndex = 10;
@@ -1048,54 +1234,6 @@ namespace sistema_reparto
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(0, 13);
             this.label9.TabIndex = 1;
-            // 
-            // btnInventario
-            // 
-            this.btnInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            this.btnInventario.Controls.Add(this.lblInventario);
-            this.btnInventario.Controls.Add(this.picIconoInventario);
-            this.btnInventario.Controls.Add(this.label20);
-            this.btnInventario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnInventario.Location = new System.Drawing.Point(-8, 705);
-            this.btnInventario.Name = "btnInventario";
-            this.btnInventario.Size = new System.Drawing.Size(189, 34);
-            this.btnInventario.TabIndex = 24;
-            this.btnInventario.MouseLeave += new System.EventHandler(this.btnInventario_MouseLeave);
-            this.btnInventario.MouseHover += new System.EventHandler(this.btnInventario_MouseHover);
-            // 
-            // lblInventario
-            // 
-            this.lblInventario.AutoSize = true;
-            this.lblInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInventario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.lblInventario.Location = new System.Drawing.Point(75, 10);
-            this.lblInventario.Name = "lblInventario";
-            this.lblInventario.Size = new System.Drawing.Size(60, 15);
-            this.lblInventario.TabIndex = 2;
-            this.lblInventario.Text = "Inventario";
-            this.lblInventario.MouseLeave += new System.EventHandler(this.lblInventario_MouseLeave);
-            this.lblInventario.MouseHover += new System.EventHandler(this.lblInventario_MouseHover);
-            // 
-            // picIconoInventario
-            // 
-            this.picIconoInventario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picIconoInventario.BackgroundImage")));
-            this.picIconoInventario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.picIconoInventario.Location = new System.Drawing.Point(26, 8);
-            this.picIconoInventario.Name = "picIconoInventario";
-            this.picIconoInventario.Size = new System.Drawing.Size(20, 21);
-            this.picIconoInventario.TabIndex = 1;
-            this.picIconoInventario.TabStop = false;
-            this.picIconoInventario.MouseLeave += new System.EventHandler(this.picIconoInventario_MouseLeave);
-            this.picIconoInventario.MouseHover += new System.EventHandler(this.picIconoInventario_MouseHover);
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Image = ((System.Drawing.Image)(resources.GetObject("label20.Image")));
-            this.label20.Location = new System.Drawing.Point(17, 10);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(0, 13);
-            this.label20.TabIndex = 1;
             // 
             // lblTituloInventario
             // 
@@ -1143,28 +1281,40 @@ namespace sistema_reparto
             this.pnlBotonBuscarInventario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBotonBuscarInventario.BackgroundImage")));
             this.pnlBotonBuscarInventario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlBotonBuscarInventario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlBotonBuscarInventario.Location = new System.Drawing.Point(448, 119);
+            this.pnlBotonBuscarInventario.Location = new System.Drawing.Point(675, 156);
             this.pnlBotonBuscarInventario.Name = "pnlBotonBuscarInventario";
             this.pnlBotonBuscarInventario.Size = new System.Drawing.Size(22, 22);
             this.pnlBotonBuscarInventario.TabIndex = 56;
+            this.pnlBotonBuscarInventario.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlBotonBuscarInventario_MouseClick);
             // 
             // txtBuscarInventario
             // 
             this.txtBuscarInventario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBuscarInventario.Location = new System.Drawing.Point(221, 128);
+            this.txtBuscarInventario.Location = new System.Drawing.Point(448, 163);
             this.txtBuscarInventario.Name = "txtBuscarInventario";
             this.txtBuscarInventario.Size = new System.Drawing.Size(221, 13);
             this.txtBuscarInventario.TabIndex = 55;
             // 
-            // dgvInventario
+            // dgvVista
             // 
-            this.dgvInventario.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
-            this.dgvInventario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvInventario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgvInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInventario.Location = new System.Drawing.Point(216, 177);
-            this.dgvInventario.Name = "dgvInventario";
-            this.dgvInventario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvVista.AllowUserToOrderColumns = true;
+            this.dgvVista.AutoGenerateColumns = false;
+            this.dgvVista.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
+            this.dgvVista.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvVista.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvVista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idInventarioDataGridViewTextBoxColumn,
+            this.idBodegaDataGridViewTextBoxColumn,
+            this.idPaqueteDataGridViewTextBoxColumn,
+            this.idClienteDataGridViewTextBoxColumn,
+            this.idEmpleadoDataGridViewTextBoxColumn,
+            this.cantidadDataGridViewTextBoxColumn,
+            this.fechaDataGridViewTextBoxColumn});
+            this.dgvVista.DataSource = this.inventarioBindingSource;
+            this.dgvVista.Location = new System.Drawing.Point(228, 233);
+            this.dgvVista.Name = "dgvVista";
+            this.dgvVista.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1172,20 +1322,135 @@ namespace sistema_reparto
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInventario.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvInventario.RowHeadersWidth = 45;
+            this.dgvVista.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvVista.RowHeadersWidth = 45;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            this.dgvInventario.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvInventario.Size = new System.Drawing.Size(307, 150);
-            this.dgvInventario.TabIndex = 57;
+            this.dgvVista.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvVista.Size = new System.Drawing.Size(755, 288);
+            this.dgvVista.TabIndex = 57;
+            // 
+            // inventarioBindingSource
+            // 
+            this.inventarioBindingSource.DataSource = typeof(sistema_reparto.Clases.Inventario);
+            // 
+            // pnlCerrar
+            // 
+            this.pnlCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.pnlCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlCerrar.BackgroundImage")));
+            this.pnlCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlCerrar.Location = new System.Drawing.Point(1023, 8);
+            this.pnlCerrar.Name = "pnlCerrar";
+            this.pnlCerrar.Size = new System.Drawing.Size(22, 20);
+            this.pnlCerrar.TabIndex = 362;
+            this.pnlCerrar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlCerrar_MouseClick);
+            // 
+            // txtIdUsu
+            // 
+            this.txtIdUsu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtIdUsu.Enabled = false;
+            this.txtIdUsu.Location = new System.Drawing.Point(901, 17);
+            this.txtIdUsu.Multiline = true;
+            this.txtIdUsu.Name = "txtIdUsu";
+            this.txtIdUsu.Size = new System.Drawing.Size(87, 14);
+            this.txtIdUsu.TabIndex = 361;
+            this.txtIdUsu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblCodigoUsu
+            // 
+            this.lblCodigoUsu.AutoSize = true;
+            this.lblCodigoUsu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoUsu.Location = new System.Drawing.Point(876, 17);
+            this.lblCodigoUsu.Name = "lblCodigoUsu";
+            this.lblCodigoUsu.Size = new System.Drawing.Size(24, 13);
+            this.lblCodigoUsu.TabIndex = 360;
+            this.lblCodigoUsu.Text = "ID:";
+            // 
+            // txtNombreUsu
+            // 
+            this.txtNombreUsu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombreUsu.Enabled = false;
+            this.txtNombreUsu.Location = new System.Drawing.Point(783, 17);
+            this.txtNombreUsu.Multiline = true;
+            this.txtNombreUsu.Name = "txtNombreUsu";
+            this.txtNombreUsu.Size = new System.Drawing.Size(87, 14);
+            this.txtNombreUsu.TabIndex = 359;
+            this.txtNombreUsu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pnlImagenU
+            // 
+            this.pnlImagenU.BackColor = System.Drawing.Color.Transparent;
+            this.pnlImagenU.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlImagenU.BackgroundImage")));
+            this.pnlImagenU.Location = new System.Drawing.Point(644, 12);
+            this.pnlImagenU.Name = "pnlImagenU";
+            this.pnlImagenU.Size = new System.Drawing.Size(20, 20);
+            this.pnlImagenU.TabIndex = 358;
+            // 
+            // lblUsuarioLog
+            // 
+            this.lblUsuarioLog.AutoSize = true;
+            this.lblUsuarioLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarioLog.Location = new System.Drawing.Point(668, 16);
+            this.lblUsuarioLog.Name = "lblUsuarioLog";
+            this.lblUsuarioLog.Size = new System.Drawing.Size(114, 13);
+            this.lblUsuarioLog.TabIndex = 357;
+            this.lblUsuarioLog.Text = "Usuario Logueado:";
+            // 
+            // idInventarioDataGridViewTextBoxColumn
+            // 
+            this.idInventarioDataGridViewTextBoxColumn.DataPropertyName = "IdInventario";
+            this.idInventarioDataGridViewTextBoxColumn.HeaderText = "Id Inventario";
+            this.idInventarioDataGridViewTextBoxColumn.Name = "idInventarioDataGridViewTextBoxColumn";
+            // 
+            // idBodegaDataGridViewTextBoxColumn
+            // 
+            this.idBodegaDataGridViewTextBoxColumn.DataPropertyName = "IdBodega";
+            this.idBodegaDataGridViewTextBoxColumn.HeaderText = "Id Bodega";
+            this.idBodegaDataGridViewTextBoxColumn.Name = "idBodegaDataGridViewTextBoxColumn";
+            // 
+            // idPaqueteDataGridViewTextBoxColumn
+            // 
+            this.idPaqueteDataGridViewTextBoxColumn.DataPropertyName = "IdPaquete";
+            this.idPaqueteDataGridViewTextBoxColumn.HeaderText = "Id Paquete";
+            this.idPaqueteDataGridViewTextBoxColumn.Name = "idPaqueteDataGridViewTextBoxColumn";
+            // 
+            // idClienteDataGridViewTextBoxColumn
+            // 
+            this.idClienteDataGridViewTextBoxColumn.DataPropertyName = "IdCliente";
+            this.idClienteDataGridViewTextBoxColumn.HeaderText = "Id Cliente";
+            this.idClienteDataGridViewTextBoxColumn.Name = "idClienteDataGridViewTextBoxColumn";
+            // 
+            // idEmpleadoDataGridViewTextBoxColumn
+            // 
+            this.idEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "IdEmpleado";
+            this.idEmpleadoDataGridViewTextBoxColumn.HeaderText = "Id Empleado";
+            this.idEmpleadoDataGridViewTextBoxColumn.Name = "idEmpleadoDataGridViewTextBoxColumn";
+            // 
+            // cantidadDataGridViewTextBoxColumn
+            // 
+            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
+            // 
+            // fechaDataGridViewTextBoxColumn
+            // 
+            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha";
+            this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
+            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
             // 
             // frmInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
-            this.ClientSize = new System.Drawing.Size(1059, 766);
-            this.Controls.Add(this.dgvInventario);
+            this.ClientSize = new System.Drawing.Size(1059, 774);
+            this.Controls.Add(this.pnlCerrar);
+            this.Controls.Add(this.txtIdUsu);
+            this.Controls.Add(this.lblCodigoUsu);
+            this.Controls.Add(this.txtNombreUsu);
+            this.Controls.Add(this.pnlImagenU);
+            this.Controls.Add(this.lblUsuarioLog);
+            this.Controls.Add(this.dgvVista);
             this.Controls.Add(this.pnlBotonBuscarInventario);
             this.Controls.Add(this.txtBuscarInventario);
             this.Controls.Add(this.lblTituloInventario);
@@ -1196,11 +1461,21 @@ namespace sistema_reparto
             this.Name = "frmInventario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmInventario";
+            this.Load += new System.EventHandler(this.frmInventario_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmInventario_MouseDown);
             this.pnlSidebar.ResumeLayout(false);
+            this.pnlTrans.ResumeLayout(false);
+            this.pnlTrans.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.btnInventario.ResumeLayout(false);
+            this.btnInventario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconoInventario)).EndInit();
             this.btnBitaTrans.ResumeLayout(false);
             this.btnBitaTrans.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoBitaTrans)).EndInit();
+            this.pnlPD.ResumeLayout(false);
+            this.pnlPD.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.btnCalificacionP.ResumeLayout(false);
             this.btnCalificacionP.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCalificacion)).EndInit();
@@ -1250,11 +1525,9 @@ namespace sistema_reparto
             this.btnTipoTransporte.ResumeLayout(false);
             this.btnTipoTransporte.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoTipoTransporte)).EndInit();
-            this.btnInventario.ResumeLayout(false);
-            this.btnInventario.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picIconoInventario)).EndInit();
             this.pnlBordeInventario.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVista)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventarioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1342,6 +1615,28 @@ namespace sistema_reparto
         private System.Windows.Forms.Label lblVistaInventario;
         private System.Windows.Forms.Panel pnlBotonBuscarInventario;
         private System.Windows.Forms.TextBox txtBuscarInventario;
-        private System.Windows.Forms.DataGridView dgvInventario;
+        private System.Windows.Forms.DataGridView dgvVista;
+        private System.Windows.Forms.BindingSource inventarioBindingSource;
+        private System.Windows.Forms.Panel pnlCerrar;
+        private System.Windows.Forms.TextBox txtIdUsu;
+        private System.Windows.Forms.Label lblCodigoUsu;
+        private System.Windows.Forms.TextBox txtNombreUsu;
+        private System.Windows.Forms.Panel pnlImagenU;
+        private System.Windows.Forms.Label lblUsuarioLog;
+        private System.Windows.Forms.Panel pnlTrans;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Panel pnlPD;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label lblPaqDet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idInventarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idBodegaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idPaqueteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idClienteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idEmpleadoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaDataGridViewTextBoxColumn;
     }
 }

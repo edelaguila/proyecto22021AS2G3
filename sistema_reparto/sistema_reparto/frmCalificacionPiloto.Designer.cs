@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCalificacionPiloto));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlSidebar = new System.Windows.Forms.Panel();
             this.btnBitaTrans = new System.Windows.Forms.Panel();
             this.lblBitaTrans = new System.Windows.Forms.Label();
@@ -138,6 +138,18 @@
             this.pnlBotonCalificacion = new System.Windows.Forms.Panel();
             this.txtBuscarCalificacion = new System.Windows.Forms.TextBox();
             this.dgvCalificacion = new System.Windows.Forms.DataGridView();
+            this.idCalificacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idPilotoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idPaqueteEncabezadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaRecepcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.llegadaTardiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.llegadaTiempoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.percancesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.retrazosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.observacionesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calificacionPilotoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlModificarC = new System.Windows.Forms.Panel();
             this.pnlBotonGuardarC = new System.Windows.Forms.Panel();
             this.pnlLLenarCamposC = new System.Windows.Forms.Panel();
@@ -159,18 +171,6 @@
             this.pnlImagenU = new System.Windows.Forms.Panel();
             this.lblUsuarioLog = new System.Windows.Forms.Label();
             this.pnlCerrar = new System.Windows.Forms.Panel();
-            this.idCalificacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idPilotoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idPaqueteEncabezadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaRecepcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.llegadaTardiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.llegadaTiempoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.percancesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.retrazosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.observacionesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.calificacionPilotoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlSidebar.SuspendLayout();
             this.btnBitaTrans.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoBitaTrans)).BeginInit();
@@ -216,13 +216,13 @@
             this.pnlPercances.SuspendLayout();
             this.pnlObservaciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCalificacion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calificacionPilotoBindingSource)).BeginInit();
             this.pnlEnvio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picEnvio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlPD.SuspendLayout();
             this.pnlTransporte.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calificacionPilotoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSidebar
@@ -1445,19 +1445,111 @@
             this.dgvCalificacion.Location = new System.Drawing.Point(663, 365);
             this.dgvCalificacion.Name = "dgvCalificacion";
             this.dgvCalificacion.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCalificacion.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCalificacion.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCalificacion.RowHeadersWidth = 45;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            this.dgvCalificacion.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.dgvCalificacion.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvCalificacion.Size = new System.Drawing.Size(349, 150);
             this.dgvCalificacion.TabIndex = 54;
+            // 
+            // idCalificacionDataGridViewTextBoxColumn
+            // 
+            this.idCalificacionDataGridViewTextBoxColumn.DataPropertyName = "IdCalificacion";
+            this.idCalificacionDataGridViewTextBoxColumn.HeaderText = "ID Calificación";
+            this.idCalificacionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idCalificacionDataGridViewTextBoxColumn.Name = "idCalificacionDataGridViewTextBoxColumn";
+            this.idCalificacionDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // idPilotoDataGridViewTextBoxColumn
+            // 
+            this.idPilotoDataGridViewTextBoxColumn.DataPropertyName = "IdPiloto";
+            this.idPilotoDataGridViewTextBoxColumn.HeaderText = "ID Piloto";
+            this.idPilotoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idPilotoDataGridViewTextBoxColumn.Name = "idPilotoDataGridViewTextBoxColumn";
+            this.idPilotoDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // idPaqueteEncabezadoDataGridViewTextBoxColumn
+            // 
+            this.idPaqueteEncabezadoDataGridViewTextBoxColumn.DataPropertyName = "IdPaqueteEncabezado";
+            this.idPaqueteEncabezadoDataGridViewTextBoxColumn.HeaderText = "ID Paquete Encabezado";
+            this.idPaqueteEncabezadoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idPaqueteEncabezadoDataGridViewTextBoxColumn.Name = "idPaqueteEncabezadoDataGridViewTextBoxColumn";
+            this.idPaqueteEncabezadoDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // idClienteDataGridViewTextBoxColumn
+            // 
+            this.idClienteDataGridViewTextBoxColumn.DataPropertyName = "IdCliente";
+            this.idClienteDataGridViewTextBoxColumn.HeaderText = "ID Cliente";
+            this.idClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idClienteDataGridViewTextBoxColumn.Name = "idClienteDataGridViewTextBoxColumn";
+            this.idClienteDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // idEmpleadoDataGridViewTextBoxColumn
+            // 
+            this.idEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "IdEmpleado";
+            this.idEmpleadoDataGridViewTextBoxColumn.HeaderText = "ID Empleado";
+            this.idEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idEmpleadoDataGridViewTextBoxColumn.Name = "idEmpleadoDataGridViewTextBoxColumn";
+            this.idEmpleadoDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // fechaRecepcionDataGridViewTextBoxColumn
+            // 
+            this.fechaRecepcionDataGridViewTextBoxColumn.DataPropertyName = "FechaRecepcion";
+            this.fechaRecepcionDataGridViewTextBoxColumn.HeaderText = "Fecha Recepción";
+            this.fechaRecepcionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.fechaRecepcionDataGridViewTextBoxColumn.Name = "fechaRecepcionDataGridViewTextBoxColumn";
+            this.fechaRecepcionDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // llegadaTardiaDataGridViewTextBoxColumn
+            // 
+            this.llegadaTardiaDataGridViewTextBoxColumn.DataPropertyName = "LlegadaTardia";
+            this.llegadaTardiaDataGridViewTextBoxColumn.HeaderText = "Llegada Tardía";
+            this.llegadaTardiaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.llegadaTardiaDataGridViewTextBoxColumn.Name = "llegadaTardiaDataGridViewTextBoxColumn";
+            this.llegadaTardiaDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // llegadaTiempoDataGridViewTextBoxColumn
+            // 
+            this.llegadaTiempoDataGridViewTextBoxColumn.DataPropertyName = "LlegadaTiempo";
+            this.llegadaTiempoDataGridViewTextBoxColumn.HeaderText = "Llegada Tiempo";
+            this.llegadaTiempoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.llegadaTiempoDataGridViewTextBoxColumn.Name = "llegadaTiempoDataGridViewTextBoxColumn";
+            this.llegadaTiempoDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // percancesDataGridViewTextBoxColumn
+            // 
+            this.percancesDataGridViewTextBoxColumn.DataPropertyName = "Percances";
+            this.percancesDataGridViewTextBoxColumn.HeaderText = "Percances";
+            this.percancesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.percancesDataGridViewTextBoxColumn.Name = "percancesDataGridViewTextBoxColumn";
+            this.percancesDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // retrazosDataGridViewTextBoxColumn
+            // 
+            this.retrazosDataGridViewTextBoxColumn.DataPropertyName = "Retrazos";
+            this.retrazosDataGridViewTextBoxColumn.HeaderText = "Retrazos";
+            this.retrazosDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.retrazosDataGridViewTextBoxColumn.Name = "retrazosDataGridViewTextBoxColumn";
+            this.retrazosDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // observacionesDataGridViewTextBoxColumn
+            // 
+            this.observacionesDataGridViewTextBoxColumn.DataPropertyName = "Observaciones";
+            this.observacionesDataGridViewTextBoxColumn.HeaderText = "Observaciones";
+            this.observacionesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.observacionesDataGridViewTextBoxColumn.Name = "observacionesDataGridViewTextBoxColumn";
+            this.observacionesDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // calificacionPilotoBindingSource
+            // 
+            this.calificacionPilotoBindingSource.DataSource = typeof(sistema_reparto.Clases.CalificacionPiloto);
             // 
             // pnlModificarC
             // 
@@ -1555,8 +1647,8 @@
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseClick);
-            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
-            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.pnlPD_MouseLeave_1);
+            this.pictureBox2.MouseHover += new System.EventHandler(this.pnlPD_MouseHover_1);
             // 
             // pnlPD
             // 
@@ -1570,8 +1662,8 @@
             this.pnlPD.Size = new System.Drawing.Size(180, 34);
             this.pnlPD.TabIndex = 67;
             this.pnlPD.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlPD_MouseClick);
-            this.pnlPD.MouseLeave += new System.EventHandler(this.pnlPD_MouseLeave);
-            this.pnlPD.MouseHover += new System.EventHandler(this.pnlPD_MouseHover);
+            this.pnlPD.MouseLeave += new System.EventHandler(this.pnlPD_MouseLeave_1);
+            this.pnlPD.MouseHover += new System.EventHandler(this.pnlPD_MouseHover_1);
             // 
             // label21
             // 
@@ -1595,8 +1687,8 @@
             this.lblPaqDet.TabIndex = 0;
             this.lblPaqDet.Text = "Paquete Detalle";
             this.lblPaqDet.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblPaqDet_MouseClick);
-            this.lblPaqDet.MouseLeave += new System.EventHandler(this.lblPaqDet_MouseLeave);
-            this.lblPaqDet.MouseHover += new System.EventHandler(this.lblPaqDet_MouseHover);
+            this.lblPaqDet.MouseLeave += new System.EventHandler(this.pnlPD_MouseLeave_1);
+            this.lblPaqDet.MouseHover += new System.EventHandler(this.pnlPD_MouseHover_1);
             // 
             // pnlTransporte
             // 
@@ -1716,98 +1808,6 @@
             this.pnlCerrar.TabIndex = 74;
             this.pnlCerrar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlCerrar_MouseClick);
             // 
-            // idCalificacionDataGridViewTextBoxColumn
-            // 
-            this.idCalificacionDataGridViewTextBoxColumn.DataPropertyName = "IdCalificacion";
-            this.idCalificacionDataGridViewTextBoxColumn.HeaderText = "ID Calificación";
-            this.idCalificacionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idCalificacionDataGridViewTextBoxColumn.Name = "idCalificacionDataGridViewTextBoxColumn";
-            this.idCalificacionDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // idPilotoDataGridViewTextBoxColumn
-            // 
-            this.idPilotoDataGridViewTextBoxColumn.DataPropertyName = "IdPiloto";
-            this.idPilotoDataGridViewTextBoxColumn.HeaderText = "ID Piloto";
-            this.idPilotoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idPilotoDataGridViewTextBoxColumn.Name = "idPilotoDataGridViewTextBoxColumn";
-            this.idPilotoDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // idPaqueteEncabezadoDataGridViewTextBoxColumn
-            // 
-            this.idPaqueteEncabezadoDataGridViewTextBoxColumn.DataPropertyName = "IdPaqueteEncabezado";
-            this.idPaqueteEncabezadoDataGridViewTextBoxColumn.HeaderText = "ID Paquete Encabezado";
-            this.idPaqueteEncabezadoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idPaqueteEncabezadoDataGridViewTextBoxColumn.Name = "idPaqueteEncabezadoDataGridViewTextBoxColumn";
-            this.idPaqueteEncabezadoDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // idClienteDataGridViewTextBoxColumn
-            // 
-            this.idClienteDataGridViewTextBoxColumn.DataPropertyName = "IdCliente";
-            this.idClienteDataGridViewTextBoxColumn.HeaderText = "ID Cliente";
-            this.idClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idClienteDataGridViewTextBoxColumn.Name = "idClienteDataGridViewTextBoxColumn";
-            this.idClienteDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // idEmpleadoDataGridViewTextBoxColumn
-            // 
-            this.idEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "IdEmpleado";
-            this.idEmpleadoDataGridViewTextBoxColumn.HeaderText = "ID Empleado";
-            this.idEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idEmpleadoDataGridViewTextBoxColumn.Name = "idEmpleadoDataGridViewTextBoxColumn";
-            this.idEmpleadoDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // fechaRecepcionDataGridViewTextBoxColumn
-            // 
-            this.fechaRecepcionDataGridViewTextBoxColumn.DataPropertyName = "FechaRecepcion";
-            this.fechaRecepcionDataGridViewTextBoxColumn.HeaderText = "Fecha Recepción";
-            this.fechaRecepcionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.fechaRecepcionDataGridViewTextBoxColumn.Name = "fechaRecepcionDataGridViewTextBoxColumn";
-            this.fechaRecepcionDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // llegadaTardiaDataGridViewTextBoxColumn
-            // 
-            this.llegadaTardiaDataGridViewTextBoxColumn.DataPropertyName = "LlegadaTardia";
-            this.llegadaTardiaDataGridViewTextBoxColumn.HeaderText = "Llegada Tardía";
-            this.llegadaTardiaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.llegadaTardiaDataGridViewTextBoxColumn.Name = "llegadaTardiaDataGridViewTextBoxColumn";
-            this.llegadaTardiaDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // llegadaTiempoDataGridViewTextBoxColumn
-            // 
-            this.llegadaTiempoDataGridViewTextBoxColumn.DataPropertyName = "LlegadaTiempo";
-            this.llegadaTiempoDataGridViewTextBoxColumn.HeaderText = "Llegada Tiempo";
-            this.llegadaTiempoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.llegadaTiempoDataGridViewTextBoxColumn.Name = "llegadaTiempoDataGridViewTextBoxColumn";
-            this.llegadaTiempoDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // percancesDataGridViewTextBoxColumn
-            // 
-            this.percancesDataGridViewTextBoxColumn.DataPropertyName = "Percances";
-            this.percancesDataGridViewTextBoxColumn.HeaderText = "Percances";
-            this.percancesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.percancesDataGridViewTextBoxColumn.Name = "percancesDataGridViewTextBoxColumn";
-            this.percancesDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // retrazosDataGridViewTextBoxColumn
-            // 
-            this.retrazosDataGridViewTextBoxColumn.DataPropertyName = "Retrazos";
-            this.retrazosDataGridViewTextBoxColumn.HeaderText = "Retrazos";
-            this.retrazosDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.retrazosDataGridViewTextBoxColumn.Name = "retrazosDataGridViewTextBoxColumn";
-            this.retrazosDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // observacionesDataGridViewTextBoxColumn
-            // 
-            this.observacionesDataGridViewTextBoxColumn.DataPropertyName = "Observaciones";
-            this.observacionesDataGridViewTextBoxColumn.HeaderText = "Observaciones";
-            this.observacionesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.observacionesDataGridViewTextBoxColumn.Name = "observacionesDataGridViewTextBoxColumn";
-            this.observacionesDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // calificacionPilotoBindingSource
-            // 
-            this.calificacionPilotoBindingSource.DataSource = typeof(sistema_reparto.Clases.CalificacionPiloto);
-            // 
             // frmCalificacionPiloto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1926,6 +1926,7 @@
             this.pnlObservaciones.ResumeLayout(false);
             this.pnlObservaciones.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCalificacion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calificacionPilotoBindingSource)).EndInit();
             this.pnlEnvio.ResumeLayout(false);
             this.pnlEnvio.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picEnvio)).EndInit();
@@ -1935,7 +1936,6 @@
             this.pnlTransporte.ResumeLayout(false);
             this.pnlTransporte.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calificacionPilotoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

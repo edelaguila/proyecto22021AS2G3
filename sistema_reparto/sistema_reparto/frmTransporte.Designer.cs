@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTransporte));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnBitaTrans = new System.Windows.Forms.Panel();
             this.lblBitaTrans = new System.Windows.Forms.Label();
@@ -172,6 +172,10 @@
             this.pnlImagenU = new System.Windows.Forms.Panel();
             this.lblUsuarioLog = new System.Windows.Forms.Label();
             this.pnlCerrar = new System.Windows.Forms.Panel();
+            this.btnInventario = new System.Windows.Forms.Panel();
+            this.lblInventario = new System.Windows.Forms.Label();
+            this.picIconoInventario = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.btnBitaTrans.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoBitaTrans)).BeginInit();
@@ -223,6 +227,8 @@
             this.pnlCampoNombreT.SuspendLayout();
             this.pnlCampoIDT.SuspendLayout();
             this.pnlBordeTransporte.SuspendLayout();
+            this.btnInventario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconoInventario)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -230,6 +236,7 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
             this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel3.Controls.Add(this.btnInventario);
             this.panel3.Controls.Add(this.btnBitaTrans);
             this.panel3.Controls.Add(this.pnlMovBodega);
             this.panel3.Controls.Add(this.btnPiloto);
@@ -1454,17 +1461,17 @@
             this.dgvTransporte.Location = new System.Drawing.Point(735, 366);
             this.dgvTransporte.Name = "dgvTransporte";
             this.dgvTransporte.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTransporte.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTransporte.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTransporte.RowHeadersWidth = 45;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            this.dgvTransporte.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.dgvTransporte.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTransporte.Size = new System.Drawing.Size(307, 150);
             this.dgvTransporte.TabIndex = 102;
             // 
@@ -1878,6 +1885,60 @@
             this.pnlCerrar.TabIndex = 112;
             this.pnlCerrar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlCerrar_MouseClick);
             // 
+            // btnInventario
+            // 
+            this.btnInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.btnInventario.Controls.Add(this.lblInventario);
+            this.btnInventario.Controls.Add(this.picIconoInventario);
+            this.btnInventario.Controls.Add(this.label3);
+            this.btnInventario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInventario.Location = new System.Drawing.Point(-4, 746);
+            this.btnInventario.Name = "btnInventario";
+            this.btnInventario.Size = new System.Drawing.Size(189, 34);
+            this.btnInventario.TabIndex = 364;
+            this.btnInventario.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnInventario_MouseClick);
+            this.btnInventario.MouseLeave += new System.EventHandler(this.btnInventario_MouseLeave);
+            this.btnInventario.MouseHover += new System.EventHandler(this.btnInventario_MouseHover);
+            // 
+            // lblInventario
+            // 
+            this.lblInventario.AutoSize = true;
+            this.lblInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.830189F);
+            this.lblInventario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblInventario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblInventario.Location = new System.Drawing.Point(75, 10);
+            this.lblInventario.Name = "lblInventario";
+            this.lblInventario.Size = new System.Drawing.Size(60, 15);
+            this.lblInventario.TabIndex = 2;
+            this.lblInventario.Text = "Inventario";
+            this.lblInventario.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnInventario_MouseClick);
+            this.lblInventario.MouseLeave += new System.EventHandler(this.btnInventario_MouseLeave);
+            this.lblInventario.MouseHover += new System.EventHandler(this.btnInventario_MouseHover);
+            // 
+            // picIconoInventario
+            // 
+            this.picIconoInventario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picIconoInventario.BackgroundImage")));
+            this.picIconoInventario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picIconoInventario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.picIconoInventario.Location = new System.Drawing.Point(26, 8);
+            this.picIconoInventario.Name = "picIconoInventario";
+            this.picIconoInventario.Size = new System.Drawing.Size(20, 21);
+            this.picIconoInventario.TabIndex = 1;
+            this.picIconoInventario.TabStop = false;
+            this.picIconoInventario.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnInventario_MouseClick);
+            this.picIconoInventario.MouseLeave += new System.EventHandler(this.btnInventario_MouseLeave);
+            this.picIconoInventario.MouseHover += new System.EventHandler(this.btnInventario_MouseHover);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Image = ((System.Drawing.Image)(resources.GetObject("label3.Image")));
+            this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label3.Location = new System.Drawing.Point(17, 10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 13);
+            this.label3.TabIndex = 1;
+            // 
             // frmTransporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2004,6 +2065,9 @@
             this.pnlCampoIDT.ResumeLayout(false);
             this.pnlCampoIDT.PerformLayout();
             this.pnlBordeTransporte.ResumeLayout(false);
+            this.btnInventario.ResumeLayout(false);
+            this.btnInventario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconoInventario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2151,5 +2215,9 @@
         private System.Windows.Forms.Panel pnlImagenU;
         private System.Windows.Forms.Label lblUsuarioLog;
         private System.Windows.Forms.Panel pnlCerrar;
+        private System.Windows.Forms.Panel btnInventario;
+        private System.Windows.Forms.Label lblInventario;
+        private System.Windows.Forms.PictureBox picIconoInventario;
+        private System.Windows.Forms.Label label3;
     }
 }

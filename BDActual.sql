@@ -1,4 +1,4 @@
-drop database sistemaRepartoBD;
+-- drop database sistemaRepartoBD;
 create database sistemaRepartoBD;
 use sistemaRepartoBD;
 
@@ -115,6 +115,7 @@ create table cliente(
     correoCliente varchar(50) not null,
     direccionCliente varchar(80) not null,
     estatusCliente char(1) not null
+    
 ) engine = InnoDB default char set latin1;
 
 create table departamento(
@@ -131,15 +132,16 @@ create table puesto(
 
 create table piloto(
 	idPiloto varchar(10) primary key not null,
-    dpiPiloto varchar(13) not null,
+    dpiPiloto varchar(10) not null,
     idUser varchar(10) not null,
     nombrePiloto varchar(30) not null,
     apellidoPiloto varchar(30) not null,
     telefonoPiloto varchar(15) not null,
     direccionPiloto varchar(80) not null,
     sueldoPiloto float not null,
-    estatusPiloto char(1) not null
-	
+    estatusPiloto char(1) not null,
+    
+    foreign key (idUser) references usuario (idUser)
 ) engine = InnoDB default char set latin1;
 
 create table empleado(
@@ -306,8 +308,10 @@ create table ruta(
 
 -- drop table envio;
 create table envio(
+	-- DPI
+	idPiloto varchar(10) not null, 
 	idOrdenE int primary key auto_increment not null,
-    idPiloto varchar(10) not null,          
+			
     idTransporteE varchar(10) not null,
     idRutaE varchar(10) not null,
     idMovBodega varchar(10) not null,

@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTipoMovimiento));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlSidebar = new System.Windows.Forms.Panel();
             this.btnBodega = new System.Windows.Forms.Panel();
             this.picBodega = new System.Windows.Forms.PictureBox();
@@ -132,6 +132,14 @@
             this.pnlImagenU = new System.Windows.Forms.Panel();
             this.lblUsuarioLog = new System.Windows.Forms.Label();
             this.pnlCerrar = new System.Windows.Forms.Panel();
+            this.pnlPD = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblPaqDet = new System.Windows.Forms.Label();
+            this.btnInventario = new System.Windows.Forms.Panel();
+            this.lblInventario = new System.Windows.Forms.Label();
+            this.picIconoInventario = new System.Windows.Forms.PictureBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.pnlSidebar.SuspendLayout();
             this.btnBodega.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBodega)).BeginInit();
@@ -170,6 +178,10 @@
             this.pnlEstatusTM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipoMovimiento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoMovimientoBindingSource)).BeginInit();
+            this.pnlPD.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.btnInventario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconoInventario)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSidebar
@@ -177,6 +189,8 @@
             this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
             this.pnlSidebar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlSidebar.BackgroundImage")));
             this.pnlSidebar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlSidebar.Controls.Add(this.btnInventario);
+            this.pnlSidebar.Controls.Add(this.pnlPD);
             this.pnlSidebar.Controls.Add(this.btnBodega);
             this.pnlSidebar.Controls.Add(this.pnlTrans);
             this.pnlSidebar.Controls.Add(this.pnlEnvio);
@@ -205,7 +219,7 @@
             this.btnBodega.Controls.Add(this.label16);
             this.btnBodega.Controls.Add(this.lblBodega);
             this.btnBodega.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBodega.Location = new System.Drawing.Point(0, 553);
+            this.btnBodega.Location = new System.Drawing.Point(0, 580);
             this.btnBodega.Name = "btnBodega";
             this.btnBodega.Size = new System.Drawing.Size(180, 34);
             this.btnBodega.TabIndex = 55;
@@ -257,11 +271,13 @@
             this.pnlTrans.Controls.Add(this.label18);
             this.pnlTrans.Controls.Add(this.label25);
             this.pnlTrans.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlTrans.Location = new System.Drawing.Point(1, 623);
+            this.pnlTrans.Location = new System.Drawing.Point(1, 650);
             this.pnlTrans.Name = "pnlTrans";
             this.pnlTrans.Size = new System.Drawing.Size(180, 34);
             this.pnlTrans.TabIndex = 59;
-            this.pnlTrans.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlTrans_MouseClick);
+            this.pnlTrans.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlTrans_MouseClick_1);
+            this.pnlTrans.MouseLeave += new System.EventHandler(this.pnlTrans_MouseLeave);
+            this.pnlTrans.MouseHover += new System.EventHandler(this.pnlTrans_MouseHover);
             // 
             // pictureBox2
             // 
@@ -274,6 +290,9 @@
             this.pictureBox2.Size = new System.Drawing.Size(20, 21);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlTrans_MouseClick_1);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.pnlTrans_MouseLeave);
+            this.pictureBox2.MouseHover += new System.EventHandler(this.pnlTrans_MouseHover);
             // 
             // label18
             // 
@@ -295,6 +314,9 @@
             this.label25.Size = new System.Drawing.Size(58, 13);
             this.label25.TabIndex = 0;
             this.label25.Text = "Transporte";
+            this.label25.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlTrans_MouseClick_1);
+            this.label25.MouseLeave += new System.EventHandler(this.pnlTrans_MouseLeave);
+            this.label25.MouseHover += new System.EventHandler(this.pnlTrans_MouseHover);
             // 
             // pnlEnvio
             // 
@@ -303,7 +325,7 @@
             this.pnlEnvio.Controls.Add(this.label17);
             this.pnlEnvio.Controls.Add(this.lblEnvio);
             this.pnlEnvio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlEnvio.Location = new System.Drawing.Point(1, 588);
+            this.pnlEnvio.Location = new System.Drawing.Point(1, 615);
             this.pnlEnvio.Name = "pnlEnvio";
             this.pnlEnvio.Size = new System.Drawing.Size(180, 34);
             this.pnlEnvio.TabIndex = 46;
@@ -355,7 +377,7 @@
             this.pnlEmpleado.Controls.Add(this.label12);
             this.pnlEmpleado.Controls.Add(this.label15);
             this.pnlEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlEmpleado.Location = new System.Drawing.Point(-2, 519);
+            this.pnlEmpleado.Location = new System.Drawing.Point(-2, 546);
             this.pnlEmpleado.Name = "pnlEmpleado";
             this.pnlEmpleado.Size = new System.Drawing.Size(180, 34);
             this.pnlEmpleado.TabIndex = 45;
@@ -1191,17 +1213,17 @@
             this.dgvTipoMovimiento.Location = new System.Drawing.Point(646, 371);
             this.dgvTipoMovimiento.Name = "dgvTipoMovimiento";
             this.dgvTipoMovimiento.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTipoMovimiento.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTipoMovimiento.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTipoMovimiento.RowHeadersWidth = 45;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
-            this.dgvTipoMovimiento.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.dgvTipoMovimiento.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTipoMovimiento.Size = new System.Drawing.Size(307, 150);
             this.dgvTipoMovimiento.TabIndex = 32;
             // 
@@ -1351,6 +1373,113 @@
             this.pnlCerrar.TabIndex = 40;
             this.pnlCerrar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlCerrar_MouseClick);
             // 
+            // pnlPD
+            // 
+            this.pnlPD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.pnlPD.Controls.Add(this.pictureBox5);
+            this.pnlPD.Controls.Add(this.label7);
+            this.pnlPD.Controls.Add(this.lblPaqDet);
+            this.pnlPD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlPD.Location = new System.Drawing.Point(-1, 518);
+            this.pnlPD.Name = "pnlPD";
+            this.pnlPD.Size = new System.Drawing.Size(180, 34);
+            this.pnlPD.TabIndex = 353;
+            this.pnlPD.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlPD_MouseClick);
+            this.pnlPD.MouseLeave += new System.EventHandler(this.pnlPD_MouseLeave);
+            this.pnlPD.MouseHover += new System.EventHandler(this.pnlPD_MouseHover);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox5.Location = new System.Drawing.Point(19, 6);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(20, 21);
+            this.pictureBox5.TabIndex = 1;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlPD_MouseClick);
+            this.pictureBox5.MouseLeave += new System.EventHandler(this.pnlPD_MouseLeave);
+            this.pictureBox5.MouseHover += new System.EventHandler(this.pnlPD_MouseHover);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Image = ((System.Drawing.Image)(resources.GetObject("label7.Image")));
+            this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label7.Location = new System.Drawing.Point(15, 10);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(0, 13);
+            this.label7.TabIndex = 1;
+            // 
+            // lblPaqDet
+            // 
+            this.lblPaqDet.AutoSize = true;
+            this.lblPaqDet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblPaqDet.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblPaqDet.Location = new System.Drawing.Point(60, 10);
+            this.lblPaqDet.Name = "lblPaqDet";
+            this.lblPaqDet.Size = new System.Drawing.Size(83, 13);
+            this.lblPaqDet.TabIndex = 0;
+            this.lblPaqDet.Text = "Paquete Detalle";
+            this.lblPaqDet.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlPD_MouseClick);
+            this.lblPaqDet.MouseLeave += new System.EventHandler(this.pnlPD_MouseLeave);
+            this.lblPaqDet.MouseHover += new System.EventHandler(this.pnlPD_MouseHover);
+            // 
+            // btnInventario
+            // 
+            this.btnInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.btnInventario.Controls.Add(this.lblInventario);
+            this.btnInventario.Controls.Add(this.picIconoInventario);
+            this.btnInventario.Controls.Add(this.label21);
+            this.btnInventario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInventario.Location = new System.Drawing.Point(-4, 684);
+            this.btnInventario.Name = "btnInventario";
+            this.btnInventario.Size = new System.Drawing.Size(189, 34);
+            this.btnInventario.TabIndex = 364;
+            this.btnInventario.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnInventario_MouseClick);
+            this.btnInventario.MouseLeave += new System.EventHandler(this.btnInventario_MouseLeave);
+            this.btnInventario.MouseHover += new System.EventHandler(this.btnInventario_MouseHover);
+            // 
+            // lblInventario
+            // 
+            this.lblInventario.AutoSize = true;
+            this.lblInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.830189F);
+            this.lblInventario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblInventario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblInventario.Location = new System.Drawing.Point(75, 10);
+            this.lblInventario.Name = "lblInventario";
+            this.lblInventario.Size = new System.Drawing.Size(60, 15);
+            this.lblInventario.TabIndex = 2;
+            this.lblInventario.Text = "Inventario";
+            this.lblInventario.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnInventario_MouseClick);
+            this.lblInventario.MouseLeave += new System.EventHandler(this.btnInventario_MouseLeave);
+            this.lblInventario.MouseHover += new System.EventHandler(this.btnInventario_MouseHover);
+            // 
+            // picIconoInventario
+            // 
+            this.picIconoInventario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picIconoInventario.BackgroundImage")));
+            this.picIconoInventario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picIconoInventario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.picIconoInventario.Location = new System.Drawing.Point(26, 8);
+            this.picIconoInventario.Name = "picIconoInventario";
+            this.picIconoInventario.Size = new System.Drawing.Size(20, 21);
+            this.picIconoInventario.TabIndex = 1;
+            this.picIconoInventario.TabStop = false;
+            this.picIconoInventario.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnInventario_MouseClick);
+            this.picIconoInventario.MouseLeave += new System.EventHandler(this.btnInventario_MouseLeave);
+            this.picIconoInventario.MouseHover += new System.EventHandler(this.btnInventario_MouseHover);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Image = ((System.Drawing.Image)(resources.GetObject("label21.Image")));
+            this.label21.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label21.Location = new System.Drawing.Point(17, 10);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(0, 13);
+            this.label21.TabIndex = 1;
+            // 
             // frmTipoMovimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1448,6 +1577,12 @@
             this.pnlEstatusTM.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipoMovimiento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoMovimientoBindingSource)).EndInit();
+            this.pnlPD.ResumeLayout(false);
+            this.pnlPD.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.btnInventario.ResumeLayout(false);
+            this.btnInventario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconoInventario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1555,5 +1690,13 @@
         private System.Windows.Forms.Panel pnlImagenU;
         private System.Windows.Forms.Label lblUsuarioLog;
         private System.Windows.Forms.Panel pnlCerrar;
+        private System.Windows.Forms.Panel pnlPD;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblPaqDet;
+        private System.Windows.Forms.Panel btnInventario;
+        private System.Windows.Forms.Label lblInventario;
+        private System.Windows.Forms.PictureBox picIconoInventario;
+        private System.Windows.Forms.Label label21;
     }
 }

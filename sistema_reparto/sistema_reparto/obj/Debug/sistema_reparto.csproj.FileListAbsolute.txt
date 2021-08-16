@@ -501,7 +501,6 @@ C:\Users\jorgi\Desktop\Entrega\sistema_reparto\sistema_reparto\obj\Debug\sistema
 C:\Users\jorgi\Desktop\Entrega\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmPuestos.resources
 C:\Users\jorgi\Desktop\Entrega\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmRuta.resources
 C:\Users\jorgi\Desktop\Entrega\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmSubUbicacion.resources
-C:\Users\jorgi\Desktop\Entrega\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmtipoEmpleado.resources
 C:\Users\jorgi\Desktop\Entrega\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmTipoMovimiento.resources
 C:\Users\jorgi\Desktop\Entrega\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmTipoTransporte.resources
 C:\Users\jorgi\Desktop\Entrega\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmUbicacion.resources
@@ -846,3 +845,10 @@ C:\Users\Wilmer\Desktop\Jorge Inventario\sistema_reparto\sistema_reparto\obj\Deb
 C:\Users\Wilmer\Desktop\Jorge Inventario\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.csproj.CopyComplete
 C:\Users\Wilmer\Desktop\Jorge Inventario\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.exe
 C:\Users\Wilmer\Desktop\Jorge Inventario\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.pdb
+C:\Users\jorgi\Desktop\Entrega\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmBitacoraTransporte.resources
+C:\Users\jorgi\Desktop\Entrega\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmCalificacionPiloto.resources
+C:\Users\jorgi\Desktop\Entrega\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmInventario.resources
+C:\Users\jorgi\Desktop\Entrega\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmLogin.resources
+C:\Users\jorgi\Desktop\Entrega\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmMovimientoBodega.resources
+C:\Users\jorgi\Desktop\Entrega\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmPiloto.resources
+C:\Users\jorgi\Desktop\Entrega\sistema_reparto\sistema_reparto\obj\Debug\sistema_reparto.frmRegistro.resources

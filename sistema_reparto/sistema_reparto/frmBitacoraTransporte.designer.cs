@@ -88,19 +88,6 @@ namespace sistema_reparto
             this.pnlBotonBuscarBitaTrans = new System.Windows.Forms.Panel();
             this.txtBuscarBitaTrans = new System.Windows.Forms.TextBox();
             this.dgvBitaTrans = new System.Windows.Forms.DataGridView();
-            this.idBitacoraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idTransporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idPilotoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kimInicialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kimFinalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaSalidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaEntradaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horaSalidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horaEntradaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lugarSalidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lugarLlegadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nivelGasolinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bitacoraTransporteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlCampoIDBiTran = new System.Windows.Forms.Panel();
             this.txtIdBiTran = new System.Windows.Forms.TextBox();
             this.lblIdBiTran = new System.Windows.Forms.Label();
@@ -176,6 +163,23 @@ namespace sistema_reparto
             this.pnlImagenU = new System.Windows.Forms.Panel();
             this.lblUsuarioLog = new System.Windows.Forms.Label();
             this.pnlCerrar = new System.Windows.Forms.Panel();
+            this.btnInventario = new System.Windows.Forms.Panel();
+            this.lblInventario = new System.Windows.Forms.Label();
+            this.picIconoInventario = new System.Windows.Forms.PictureBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.idBitacoraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idTransporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idPilotoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kimInicialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kimFinalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaSalidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaEntradaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaSalidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaEntradaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lugarSalidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lugarLlegadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nivelGasolinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bitacoraTransporteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlSubUbicacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSubUbicacion)).BeginInit();
             this.btnRuta.SuspendLayout();
@@ -198,7 +202,6 @@ namespace sistema_reparto
             this.pnlCampoKMFin.SuspendLayout();
             this.pnlCampoKMIni.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBitaTrans)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bitacoraTransporteBindingSource)).BeginInit();
             this.pnlCampoIDBiTran.SuspendLayout();
             this.pnlBordeBitaTrans.SuspendLayout();
             this.pnlCampoIDTrans.SuspendLayout();
@@ -229,6 +232,9 @@ namespace sistema_reparto
             this.btnUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            this.btnInventario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconoInventario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bitacoraTransporteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSubUbicacion
@@ -238,7 +244,7 @@ namespace sistema_reparto
             this.pnlSubUbicacion.Controls.Add(this.label8);
             this.pnlSubUbicacion.Controls.Add(this.lblSubUbicacion);
             this.pnlSubUbicacion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlSubUbicacion.Location = new System.Drawing.Point(-1, 342);
+            this.pnlSubUbicacion.Location = new System.Drawing.Point(-1, 320);
             this.pnlSubUbicacion.Name = "pnlSubUbicacion";
             this.pnlSubUbicacion.Size = new System.Drawing.Size(180, 34);
             this.pnlSubUbicacion.TabIndex = 43;
@@ -272,11 +278,11 @@ namespace sistema_reparto
             // lblSubUbicacion
             // 
             this.lblSubUbicacion.AutoSize = true;
-            this.lblSubUbicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubUbicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubUbicacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.lblSubUbicacion.Location = new System.Drawing.Point(57, 10);
+            this.lblSubUbicacion.Location = new System.Drawing.Point(65, 10);
             this.lblSubUbicacion.Name = "lblSubUbicacion";
-            this.lblSubUbicacion.Size = new System.Drawing.Size(93, 16);
+            this.lblSubUbicacion.Size = new System.Drawing.Size(74, 13);
             this.lblSubUbicacion.TabIndex = 0;
             this.lblSubUbicacion.Text = "SubUbicacion";
             this.lblSubUbicacion.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblSubUbicacion_MouseClick);
@@ -290,7 +296,7 @@ namespace sistema_reparto
             this.btnRuta.Controls.Add(this.label12);
             this.btnRuta.Controls.Add(this.lblRuta);
             this.btnRuta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRuta.Location = new System.Drawing.Point(-1, 309);
+            this.btnRuta.Location = new System.Drawing.Point(-1, 287);
             this.btnRuta.Name = "btnRuta";
             this.btnRuta.Size = new System.Drawing.Size(180, 34);
             this.btnRuta.TabIndex = 44;
@@ -323,11 +329,11 @@ namespace sistema_reparto
             // lblRuta
             // 
             this.lblRuta.AutoSize = true;
-            this.lblRuta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRuta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRuta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.lblRuta.Location = new System.Drawing.Point(79, 10);
+            this.lblRuta.Location = new System.Drawing.Point(85, 10);
             this.lblRuta.Name = "lblRuta";
-            this.lblRuta.Size = new System.Drawing.Size(36, 16);
+            this.lblRuta.Size = new System.Drawing.Size(30, 13);
             this.lblRuta.TabIndex = 0;
             this.lblRuta.Text = "Ruta";
             this.lblRuta.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblRuta_MouseClick);
@@ -341,7 +347,7 @@ namespace sistema_reparto
             this.btnTipoTransporte.Controls.Add(this.picIconoTipoTransporte);
             this.btnTipoTransporte.Controls.Add(this.label6);
             this.btnTipoTransporte.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTipoTransporte.Location = new System.Drawing.Point(-1, 375);
+            this.btnTipoTransporte.Location = new System.Drawing.Point(-1, 353);
             this.btnTipoTransporte.Name = "btnTipoTransporte";
             this.btnTipoTransporte.Size = new System.Drawing.Size(180, 34);
             this.btnTipoTransporte.TabIndex = 5;
@@ -352,11 +358,11 @@ namespace sistema_reparto
             // lblTipoTransporte
             // 
             this.lblTipoTransporte.AutoSize = true;
-            this.lblTipoTransporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoTransporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipoTransporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.lblTipoTransporte.Location = new System.Drawing.Point(57, 10);
+            this.lblTipoTransporte.Location = new System.Drawing.Point(65, 10);
             this.lblTipoTransporte.Name = "lblTipoTransporte";
-            this.lblTipoTransporte.Size = new System.Drawing.Size(93, 15);
+            this.lblTipoTransporte.Size = new System.Drawing.Size(82, 13);
             this.lblTipoTransporte.TabIndex = 2;
             this.lblTipoTransporte.Text = "Tipo Transporte";
             this.lblTipoTransporte.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblTipoTransporte_MouseClick);
@@ -392,7 +398,7 @@ namespace sistema_reparto
             this.btnUbicacion.Controls.Add(this.picIconoUbicacion);
             this.btnUbicacion.Controls.Add(this.label5);
             this.btnUbicacion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUbicacion.Location = new System.Drawing.Point(-1, 276);
+            this.btnUbicacion.Location = new System.Drawing.Point(-1, 254);
             this.btnUbicacion.Name = "btnUbicacion";
             this.btnUbicacion.Size = new System.Drawing.Size(180, 34);
             this.btnUbicacion.TabIndex = 4;
@@ -404,7 +410,7 @@ namespace sistema_reparto
             // 
             this.lblUbicacion.AutoSize = true;
             this.lblUbicacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.lblUbicacion.Location = new System.Drawing.Point(69, 10);
+            this.lblUbicacion.Location = new System.Drawing.Point(72, 10);
             this.lblUbicacion.Name = "lblUbicacion";
             this.lblUbicacion.Size = new System.Drawing.Size(55, 13);
             this.lblUbicacion.TabIndex = 2;
@@ -442,7 +448,7 @@ namespace sistema_reparto
             this.btnDepartamento.Controls.Add(this.picDepartamento);
             this.btnDepartamento.Controls.Add(this.label4);
             this.btnDepartamento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDepartamento.Location = new System.Drawing.Point(-1, 243);
+            this.btnDepartamento.Location = new System.Drawing.Point(-1, 221);
             this.btnDepartamento.Name = "btnDepartamento";
             this.btnDepartamento.Size = new System.Drawing.Size(180, 34);
             this.btnDepartamento.TabIndex = 3;
@@ -492,7 +498,7 @@ namespace sistema_reparto
             this.btnPuesto.Controls.Add(this.label2);
             this.btnPuesto.Controls.Add(this.lblPuesto);
             this.btnPuesto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPuesto.Location = new System.Drawing.Point(-1, 210);
+            this.btnPuesto.Location = new System.Drawing.Point(-1, 188);
             this.btnPuesto.Name = "btnPuesto";
             this.btnPuesto.Size = new System.Drawing.Size(180, 34);
             this.btnPuesto.TabIndex = 2;
@@ -542,7 +548,7 @@ namespace sistema_reparto
             this.btnCliente.Controls.Add(this.label1);
             this.btnCliente.Controls.Add(this.lblCliente);
             this.btnCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCliente.Location = new System.Drawing.Point(-1, 177);
+            this.btnCliente.Location = new System.Drawing.Point(-1, 155);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Size = new System.Drawing.Size(180, 34);
             this.btnCliente.TabIndex = 1;
@@ -876,82 +882,6 @@ namespace sistema_reparto
             this.dgvBitaTrans.Size = new System.Drawing.Size(307, 150);
             this.dgvBitaTrans.TabIndex = 72;
             // 
-            // idBitacoraDataGridViewTextBoxColumn
-            // 
-            this.idBitacoraDataGridViewTextBoxColumn.DataPropertyName = "IdBitacora";
-            this.idBitacoraDataGridViewTextBoxColumn.HeaderText = "Id Bitacora";
-            this.idBitacoraDataGridViewTextBoxColumn.Name = "idBitacoraDataGridViewTextBoxColumn";
-            // 
-            // idTransporteDataGridViewTextBoxColumn
-            // 
-            this.idTransporteDataGridViewTextBoxColumn.DataPropertyName = "IdTransporte";
-            this.idTransporteDataGridViewTextBoxColumn.HeaderText = "Id Transporte";
-            this.idTransporteDataGridViewTextBoxColumn.Name = "idTransporteDataGridViewTextBoxColumn";
-            // 
-            // idPilotoDataGridViewTextBoxColumn
-            // 
-            this.idPilotoDataGridViewTextBoxColumn.DataPropertyName = "IdPiloto";
-            this.idPilotoDataGridViewTextBoxColumn.HeaderText = "Id Piloto";
-            this.idPilotoDataGridViewTextBoxColumn.Name = "idPilotoDataGridViewTextBoxColumn";
-            // 
-            // kimInicialDataGridViewTextBoxColumn
-            // 
-            this.kimInicialDataGridViewTextBoxColumn.DataPropertyName = "KimInicial";
-            this.kimInicialDataGridViewTextBoxColumn.HeaderText = "Kim Inicial";
-            this.kimInicialDataGridViewTextBoxColumn.Name = "kimInicialDataGridViewTextBoxColumn";
-            // 
-            // kimFinalDataGridViewTextBoxColumn
-            // 
-            this.kimFinalDataGridViewTextBoxColumn.DataPropertyName = "KimFinal";
-            this.kimFinalDataGridViewTextBoxColumn.HeaderText = "Kim Final";
-            this.kimFinalDataGridViewTextBoxColumn.Name = "kimFinalDataGridViewTextBoxColumn";
-            // 
-            // fechaSalidaDataGridViewTextBoxColumn
-            // 
-            this.fechaSalidaDataGridViewTextBoxColumn.DataPropertyName = "FechaSalida";
-            this.fechaSalidaDataGridViewTextBoxColumn.HeaderText = "Fecha Salida";
-            this.fechaSalidaDataGridViewTextBoxColumn.Name = "fechaSalidaDataGridViewTextBoxColumn";
-            // 
-            // fechaEntradaDataGridViewTextBoxColumn
-            // 
-            this.fechaEntradaDataGridViewTextBoxColumn.DataPropertyName = "FechaEntrada";
-            this.fechaEntradaDataGridViewTextBoxColumn.HeaderText = "Fecha Entrada";
-            this.fechaEntradaDataGridViewTextBoxColumn.Name = "fechaEntradaDataGridViewTextBoxColumn";
-            // 
-            // horaSalidaDataGridViewTextBoxColumn
-            // 
-            this.horaSalidaDataGridViewTextBoxColumn.DataPropertyName = "HoraSalida";
-            this.horaSalidaDataGridViewTextBoxColumn.HeaderText = "Hora Salida";
-            this.horaSalidaDataGridViewTextBoxColumn.Name = "horaSalidaDataGridViewTextBoxColumn";
-            // 
-            // horaEntradaDataGridViewTextBoxColumn
-            // 
-            this.horaEntradaDataGridViewTextBoxColumn.DataPropertyName = "HoraEntrada";
-            this.horaEntradaDataGridViewTextBoxColumn.HeaderText = "Hora Entrada";
-            this.horaEntradaDataGridViewTextBoxColumn.Name = "horaEntradaDataGridViewTextBoxColumn";
-            // 
-            // lugarSalidaDataGridViewTextBoxColumn
-            // 
-            this.lugarSalidaDataGridViewTextBoxColumn.DataPropertyName = "LugarSalida";
-            this.lugarSalidaDataGridViewTextBoxColumn.HeaderText = "Lugar Salida";
-            this.lugarSalidaDataGridViewTextBoxColumn.Name = "lugarSalidaDataGridViewTextBoxColumn";
-            // 
-            // lugarLlegadaDataGridViewTextBoxColumn
-            // 
-            this.lugarLlegadaDataGridViewTextBoxColumn.DataPropertyName = "LugarLlegada";
-            this.lugarLlegadaDataGridViewTextBoxColumn.HeaderText = "Lugar Llegada";
-            this.lugarLlegadaDataGridViewTextBoxColumn.Name = "lugarLlegadaDataGridViewTextBoxColumn";
-            // 
-            // nivelGasolinaDataGridViewTextBoxColumn
-            // 
-            this.nivelGasolinaDataGridViewTextBoxColumn.DataPropertyName = "NivelGasolina";
-            this.nivelGasolinaDataGridViewTextBoxColumn.HeaderText = "Nivel Gasolina";
-            this.nivelGasolinaDataGridViewTextBoxColumn.Name = "nivelGasolinaDataGridViewTextBoxColumn";
-            // 
-            // bitacoraTransporteBindingSource
-            // 
-            this.bitacoraTransporteBindingSource.DataSource = typeof(sistema_reparto.Clases.BitacoraTransporte);
-            // 
             // pnlCampoIDBiTran
             // 
             this.pnlCampoIDBiTran.Controls.Add(this.txtIdBiTran);
@@ -1180,7 +1110,7 @@ namespace sistema_reparto
             this.btnPaqueteEncabezado.Controls.Add(this.picIconoPaqueteE);
             this.btnPaqueteEncabezado.Controls.Add(this.label9);
             this.btnPaqueteEncabezado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPaqueteEncabezado.Location = new System.Drawing.Point(-1, 441);
+            this.btnPaqueteEncabezado.Location = new System.Drawing.Point(-1, 419);
             this.btnPaqueteEncabezado.Name = "btnPaqueteEncabezado";
             this.btnPaqueteEncabezado.Size = new System.Drawing.Size(189, 34);
             this.btnPaqueteEncabezado.TabIndex = 6;
@@ -1191,11 +1121,11 @@ namespace sistema_reparto
             // lblPaqueteEncabezado
             // 
             this.lblPaqueteEncabezado.AutoSize = true;
-            this.lblPaqueteEncabezado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaqueteEncabezado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPaqueteEncabezado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.lblPaqueteEncabezado.Location = new System.Drawing.Point(49, 10);
+            this.lblPaqueteEncabezado.Location = new System.Drawing.Point(54, 10);
             this.lblPaqueteEncabezado.Name = "lblPaqueteEncabezado";
-            this.lblPaqueteEncabezado.Size = new System.Drawing.Size(125, 15);
+            this.lblPaqueteEncabezado.Size = new System.Drawing.Size(110, 13);
             this.lblPaqueteEncabezado.TabIndex = 2;
             this.lblPaqueteEncabezado.Text = "Paquete Encabezado";
             this.lblPaqueteEncabezado.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblPaqueteEncabezado_MouseClick);
@@ -1231,7 +1161,7 @@ namespace sistema_reparto
             this.btnPiloto.Controls.Add(this.picIconoPiloto);
             this.btnPiloto.Controls.Add(this.label10);
             this.btnPiloto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPiloto.Location = new System.Drawing.Point(-1, 705);
+            this.btnPiloto.Location = new System.Drawing.Point(-1, 683);
             this.btnPiloto.Name = "btnPiloto";
             this.btnPiloto.Size = new System.Drawing.Size(189, 34);
             this.btnPiloto.TabIndex = 7;
@@ -1282,9 +1212,9 @@ namespace sistema_reparto
             this.btnBitaTrans.Controls.Add(this.picIconoBitaTrans);
             this.btnBitaTrans.Controls.Add(this.label13);
             this.btnBitaTrans.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBitaTrans.Location = new System.Drawing.Point(-20, 737);
+            this.btnBitaTrans.Location = new System.Drawing.Point(-20, 715);
             this.btnBitaTrans.Name = "btnBitaTrans";
-            this.btnBitaTrans.Size = new System.Drawing.Size(189, 34);
+            this.btnBitaTrans.Size = new System.Drawing.Size(199, 34);
             this.btnBitaTrans.TabIndex = 8;
             this.btnBitaTrans.MouseLeave += new System.EventHandler(this.btnBitaTrans_MouseLeave);
             this.btnBitaTrans.MouseHover += new System.EventHandler(this.btnBitaTrans_MouseHover);
@@ -1328,6 +1258,7 @@ namespace sistema_reparto
             this.pnlBgSide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
             this.pnlBgSide.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBgSide.BackgroundImage")));
             this.pnlBgSide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlBgSide.Controls.Add(this.btnInventario);
             this.pnlBgSide.Controls.Add(this.btnBitaTrans);
             this.pnlBgSide.Controls.Add(this.btnCalificacionP);
             this.pnlBgSide.Controls.Add(this.pnlMovBodega);
@@ -1349,7 +1280,7 @@ namespace sistema_reparto
             this.pnlBgSide.Controls.Add(this.pnlSubUbicacion);
             this.pnlBgSide.Location = new System.Drawing.Point(0, 0);
             this.pnlBgSide.Name = "pnlBgSide";
-            this.pnlBgSide.Size = new System.Drawing.Size(179, 776);
+            this.pnlBgSide.Size = new System.Drawing.Size(179, 798);
             this.pnlBgSide.TabIndex = 91;
             this.pnlBgSide.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBgSide_Paint);
             // 
@@ -1360,7 +1291,7 @@ namespace sistema_reparto
             this.btnCalificacionP.Controls.Add(this.label11);
             this.btnCalificacionP.Controls.Add(this.lblCalificacion);
             this.btnCalificacionP.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCalificacionP.Location = new System.Drawing.Point(-1, 672);
+            this.btnCalificacionP.Location = new System.Drawing.Point(-1, 650);
             this.btnCalificacionP.Name = "btnCalificacionP";
             this.btnCalificacionP.Size = new System.Drawing.Size(180, 34);
             this.btnCalificacionP.TabIndex = 351;
@@ -1412,7 +1343,7 @@ namespace sistema_reparto
             this.pnlMovBodega.Controls.Add(this.label26);
             this.pnlMovBodega.Controls.Add(this.lblMovimientoBodega);
             this.pnlMovBodega.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlMovBodega.Location = new System.Drawing.Point(-1, 639);
+            this.pnlMovBodega.Location = new System.Drawing.Point(-1, 617);
             this.pnlMovBodega.Name = "pnlMovBodega";
             this.pnlMovBodega.Size = new System.Drawing.Size(180, 34);
             this.pnlMovBodega.TabIndex = 76;
@@ -1463,7 +1394,7 @@ namespace sistema_reparto
             this.btnBodega.Controls.Add(this.label3);
             this.btnBodega.Controls.Add(this.lblBodega);
             this.btnBodega.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBodega.Location = new System.Drawing.Point(-1, 540);
+            this.btnBodega.Location = new System.Drawing.Point(-1, 518);
             this.btnBodega.Name = "btnBodega";
             this.btnBodega.Size = new System.Drawing.Size(180, 34);
             this.btnBodega.TabIndex = 72;
@@ -1514,7 +1445,7 @@ namespace sistema_reparto
             this.pnlPD.Controls.Add(this.label7);
             this.pnlPD.Controls.Add(this.lblPaqDet);
             this.pnlPD.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlPD.Location = new System.Drawing.Point(-1, 474);
+            this.pnlPD.Location = new System.Drawing.Point(-1, 452);
             this.pnlPD.Name = "pnlPD";
             this.pnlPD.Size = new System.Drawing.Size(180, 34);
             this.pnlPD.TabIndex = 75;
@@ -1568,7 +1499,7 @@ namespace sistema_reparto
             this.pnlTrans.Controls.Add(this.label15);
             this.pnlTrans.Controls.Add(this.label25);
             this.pnlTrans.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlTrans.Location = new System.Drawing.Point(-1, 606);
+            this.pnlTrans.Location = new System.Drawing.Point(-1, 584);
             this.pnlTrans.Name = "pnlTrans";
             this.pnlTrans.Size = new System.Drawing.Size(180, 34);
             this.pnlTrans.TabIndex = 74;
@@ -1622,7 +1553,7 @@ namespace sistema_reparto
             this.pnlEnvio.Controls.Add(this.label16);
             this.pnlEnvio.Controls.Add(this.lblEnvio);
             this.pnlEnvio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlEnvio.Location = new System.Drawing.Point(-1, 573);
+            this.pnlEnvio.Location = new System.Drawing.Point(-1, 551);
             this.pnlEnvio.Name = "pnlEnvio";
             this.pnlEnvio.Size = new System.Drawing.Size(180, 34);
             this.pnlEnvio.TabIndex = 73;
@@ -1673,7 +1604,7 @@ namespace sistema_reparto
             this.pnlEmpleado.Controls.Add(this.label17);
             this.pnlEmpleado.Controls.Add(this.label18);
             this.pnlEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlEmpleado.Location = new System.Drawing.Point(-1, 507);
+            this.pnlEmpleado.Location = new System.Drawing.Point(-1, 485);
             this.pnlEmpleado.Name = "pnlEmpleado";
             this.pnlEmpleado.Size = new System.Drawing.Size(180, 34);
             this.pnlEmpleado.TabIndex = 69;
@@ -1724,7 +1655,7 @@ namespace sistema_reparto
             this.btnUsuarios.Controls.Add(this.picIconoUsuarios);
             this.btnUsuarios.Controls.Add(this.label19);
             this.btnUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUsuarios.Location = new System.Drawing.Point(-1, 408);
+            this.btnUsuarios.Location = new System.Drawing.Point(-1, 386);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(180, 34);
             this.btnUsuarios.TabIndex = 70;
@@ -1735,11 +1666,11 @@ namespace sistema_reparto
             // lblUsuarios
             // 
             this.lblUsuarios.AutoSize = true;
-            this.lblUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.lblUsuarios.Location = new System.Drawing.Point(73, 10);
+            this.lblUsuarios.Location = new System.Drawing.Point(80, 10);
             this.lblUsuarios.Name = "lblUsuarios";
-            this.lblUsuarios.Size = new System.Drawing.Size(56, 15);
+            this.lblUsuarios.Size = new System.Drawing.Size(48, 13);
             this.lblUsuarios.TabIndex = 2;
             this.lblUsuarios.Text = "Usuarios";
             this.lblUsuarios.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblUsuarios_MouseClick);
@@ -1843,12 +1774,139 @@ namespace sistema_reparto
             this.pnlCerrar.TabIndex = 97;
             this.pnlCerrar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlCerrar_MouseClick);
             // 
+            // btnInventario
+            // 
+            this.btnInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(102)))), ((int)(((byte)(107)))));
+            this.btnInventario.Controls.Add(this.lblInventario);
+            this.btnInventario.Controls.Add(this.picIconoInventario);
+            this.btnInventario.Controls.Add(this.label20);
+            this.btnInventario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInventario.Location = new System.Drawing.Point(-6, 745);
+            this.btnInventario.Name = "btnInventario";
+            this.btnInventario.Size = new System.Drawing.Size(166, 31);
+            this.btnInventario.TabIndex = 362;
+            this.btnInventario.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblInventario_MouseClick);
+            this.btnInventario.MouseLeave += new System.EventHandler(this.lblInventario_MouseLeave);
+            this.btnInventario.MouseHover += new System.EventHandler(this.lblInventario_MouseHover);
+            // 
+            // lblInventario
+            // 
+            this.lblInventario.AutoSize = true;
+            this.lblInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInventario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.lblInventario.Location = new System.Drawing.Point(80, 10);
+            this.lblInventario.Name = "lblInventario";
+            this.lblInventario.Size = new System.Drawing.Size(54, 13);
+            this.lblInventario.TabIndex = 2;
+            this.lblInventario.Text = "Inventario";
+            this.lblInventario.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblInventario_MouseClick);
+            this.lblInventario.MouseLeave += new System.EventHandler(this.lblInventario_MouseLeave);
+            this.lblInventario.MouseHover += new System.EventHandler(this.lblInventario_MouseHover);
+            // 
+            // picIconoInventario
+            // 
+            this.picIconoInventario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picIconoInventario.BackgroundImage")));
+            this.picIconoInventario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picIconoInventario.Location = new System.Drawing.Point(26, 8);
+            this.picIconoInventario.Name = "picIconoInventario";
+            this.picIconoInventario.Size = new System.Drawing.Size(20, 21);
+            this.picIconoInventario.TabIndex = 1;
+            this.picIconoInventario.TabStop = false;
+            this.picIconoInventario.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblInventario_MouseClick);
+            this.picIconoInventario.MouseLeave += new System.EventHandler(this.lblInventario_MouseLeave);
+            this.picIconoInventario.MouseHover += new System.EventHandler(this.lblInventario_MouseHover);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Image = ((System.Drawing.Image)(resources.GetObject("label20.Image")));
+            this.label20.Location = new System.Drawing.Point(17, 10);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(0, 13);
+            this.label20.TabIndex = 1;
+            // 
+            // idBitacoraDataGridViewTextBoxColumn
+            // 
+            this.idBitacoraDataGridViewTextBoxColumn.DataPropertyName = "IdBitacora";
+            this.idBitacoraDataGridViewTextBoxColumn.HeaderText = "Id Bitacora";
+            this.idBitacoraDataGridViewTextBoxColumn.Name = "idBitacoraDataGridViewTextBoxColumn";
+            // 
+            // idTransporteDataGridViewTextBoxColumn
+            // 
+            this.idTransporteDataGridViewTextBoxColumn.DataPropertyName = "IdTransporte";
+            this.idTransporteDataGridViewTextBoxColumn.HeaderText = "Id Transporte";
+            this.idTransporteDataGridViewTextBoxColumn.Name = "idTransporteDataGridViewTextBoxColumn";
+            // 
+            // idPilotoDataGridViewTextBoxColumn
+            // 
+            this.idPilotoDataGridViewTextBoxColumn.DataPropertyName = "IdPiloto";
+            this.idPilotoDataGridViewTextBoxColumn.HeaderText = "Id Piloto";
+            this.idPilotoDataGridViewTextBoxColumn.Name = "idPilotoDataGridViewTextBoxColumn";
+            // 
+            // kimInicialDataGridViewTextBoxColumn
+            // 
+            this.kimInicialDataGridViewTextBoxColumn.DataPropertyName = "KimInicial";
+            this.kimInicialDataGridViewTextBoxColumn.HeaderText = "Kim Inicial";
+            this.kimInicialDataGridViewTextBoxColumn.Name = "kimInicialDataGridViewTextBoxColumn";
+            // 
+            // kimFinalDataGridViewTextBoxColumn
+            // 
+            this.kimFinalDataGridViewTextBoxColumn.DataPropertyName = "KimFinal";
+            this.kimFinalDataGridViewTextBoxColumn.HeaderText = "Kim Final";
+            this.kimFinalDataGridViewTextBoxColumn.Name = "kimFinalDataGridViewTextBoxColumn";
+            // 
+            // fechaSalidaDataGridViewTextBoxColumn
+            // 
+            this.fechaSalidaDataGridViewTextBoxColumn.DataPropertyName = "FechaSalida";
+            this.fechaSalidaDataGridViewTextBoxColumn.HeaderText = "Fecha Salida";
+            this.fechaSalidaDataGridViewTextBoxColumn.Name = "fechaSalidaDataGridViewTextBoxColumn";
+            // 
+            // fechaEntradaDataGridViewTextBoxColumn
+            // 
+            this.fechaEntradaDataGridViewTextBoxColumn.DataPropertyName = "FechaEntrada";
+            this.fechaEntradaDataGridViewTextBoxColumn.HeaderText = "Fecha Entrada";
+            this.fechaEntradaDataGridViewTextBoxColumn.Name = "fechaEntradaDataGridViewTextBoxColumn";
+            // 
+            // horaSalidaDataGridViewTextBoxColumn
+            // 
+            this.horaSalidaDataGridViewTextBoxColumn.DataPropertyName = "HoraSalida";
+            this.horaSalidaDataGridViewTextBoxColumn.HeaderText = "Hora Salida";
+            this.horaSalidaDataGridViewTextBoxColumn.Name = "horaSalidaDataGridViewTextBoxColumn";
+            // 
+            // horaEntradaDataGridViewTextBoxColumn
+            // 
+            this.horaEntradaDataGridViewTextBoxColumn.DataPropertyName = "HoraEntrada";
+            this.horaEntradaDataGridViewTextBoxColumn.HeaderText = "Hora Entrada";
+            this.horaEntradaDataGridViewTextBoxColumn.Name = "horaEntradaDataGridViewTextBoxColumn";
+            // 
+            // lugarSalidaDataGridViewTextBoxColumn
+            // 
+            this.lugarSalidaDataGridViewTextBoxColumn.DataPropertyName = "LugarSalida";
+            this.lugarSalidaDataGridViewTextBoxColumn.HeaderText = "Lugar Salida";
+            this.lugarSalidaDataGridViewTextBoxColumn.Name = "lugarSalidaDataGridViewTextBoxColumn";
+            // 
+            // lugarLlegadaDataGridViewTextBoxColumn
+            // 
+            this.lugarLlegadaDataGridViewTextBoxColumn.DataPropertyName = "LugarLlegada";
+            this.lugarLlegadaDataGridViewTextBoxColumn.HeaderText = "Lugar Llegada";
+            this.lugarLlegadaDataGridViewTextBoxColumn.Name = "lugarLlegadaDataGridViewTextBoxColumn";
+            // 
+            // nivelGasolinaDataGridViewTextBoxColumn
+            // 
+            this.nivelGasolinaDataGridViewTextBoxColumn.DataPropertyName = "NivelGasolina";
+            this.nivelGasolinaDataGridViewTextBoxColumn.HeaderText = "Nivel Gasolina";
+            this.nivelGasolinaDataGridViewTextBoxColumn.Name = "nivelGasolinaDataGridViewTextBoxColumn";
+            // 
+            // bitacoraTransporteBindingSource
+            // 
+            this.bitacoraTransporteBindingSource.DataSource = typeof(sistema_reparto.Clases.BitacoraTransporte);
+            // 
             // frmBitacoraTransporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(234)))), ((int)(((byte)(235)))));
-            this.ClientSize = new System.Drawing.Size(1059, 778);
+            this.ClientSize = new System.Drawing.Size(1059, 788);
             this.Controls.Add(this.pnlCerrar);
             this.Controls.Add(this.txtIdUsu);
             this.Controls.Add(this.lblCodigoUsu);
@@ -1923,7 +1981,6 @@ namespace sistema_reparto
             this.pnlCampoKMIni.ResumeLayout(false);
             this.pnlCampoKMIni.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBitaTrans)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bitacoraTransporteBindingSource)).EndInit();
             this.pnlCampoIDBiTran.ResumeLayout(false);
             this.pnlCampoIDBiTran.PerformLayout();
             this.pnlBordeBitaTrans.ResumeLayout(false);
@@ -1970,6 +2027,10 @@ namespace sistema_reparto
             this.btnUsuarios.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIconoUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            this.btnInventario.ResumeLayout(false);
+            this.btnInventario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIconoInventario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bitacoraTransporteBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2119,5 +2180,9 @@ namespace sistema_reparto
         private System.Windows.Forms.Panel pnlImagenU;
         private System.Windows.Forms.Label lblUsuarioLog;
         private System.Windows.Forms.Panel pnlCerrar;
+        private System.Windows.Forms.Panel btnInventario;
+        private System.Windows.Forms.Label lblInventario;
+        private System.Windows.Forms.PictureBox picIconoInventario;
+        private System.Windows.Forms.Label label20;
     }
 }

@@ -42,6 +42,7 @@ namespace sistema_reparto
             InitializeComponent();
             /* Codigo para redondear mi panel */
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+            funCargarTabla(null);
 
             /*Inicio Esconder contenidos de mi form Inventario */
             lblTituloInventario.Visible = true;
@@ -49,8 +50,17 @@ namespace sistema_reparto
             pnlBordeInventario.Visible = false;
             txtBuscarInventario.Visible = false;
             pnlBotonBuscarInventario.Visible = false;
-            dgvInventario.Visible = false;
+            dgvVista.Visible = false;
             /*Final Esconder contenidos de mi form Piloto */
+
+            String idUsuario = Login.idUsuario;
+
+
+            LoginC loginC = new LoginC();
+
+            txtNombreUsu.Text = loginC.funBuscarNormbre(idUsuario);
+            txtIdUsu.Text = idUsuario;
+
         }
 
         private void btnCliente_MouseClick(object sender, MouseEventArgs e)
@@ -504,7 +514,7 @@ namespace sistema_reparto
             pnlBordeInventario.Visible = true;
             txtBuscarInventario.Visible = true;
             pnlBotonBuscarInventario.Visible = true;
-            dgvInventario.Visible = true;
+            dgvVista.Visible = true;
         }
 
         private void btnCliente_MouseHover(object sender, EventArgs e)
@@ -1015,6 +1025,68 @@ namespace sistema_reparto
         private void picIconoInventario_MouseLeave(object sender, EventArgs e)
         {
             btnInventario.BackColor = colorNormalInventario;
+        }
+
+        private void funCargarTabla(string dato)
+        {
+            List<Ruta> lista = new List<Ruta>();
+            Inventario inventario = new Inventario();
+
+            dgvVista.DataSource = inventario.consulta(dato);
+        }
+        private void pnlBotonBuscarInventario_MouseClick(object sender, MouseEventArgs e)
+        {
+            /* Inicio buscando el dato ingresado por el usuario y llenando mi tabla */
+            String buscarInventario = txtBuscarInventario.Text;
+            funCargarTabla(buscarInventario);
+            /* Final buscando el dato ingresado por el usuario y llenando mi tabla */
+
+            /* Inicio Vaciando los campos */
+
+        }
+
+        private void frmInventario_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlCerrar_MouseClick(object sender, MouseEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pnlPD_MouseHover(object sender, EventArgs e)
+        {
+            pnlPD.BackColor = colorHoverInventario;
+        }
+
+        private void pnlPD_MouseLeave(object sender, EventArgs e)
+        {
+            pnlPD.BackColor = colorNormalInventario;
+        }
+
+        private void pnlTrans_MouseHover(object sender, EventArgs e)
+        {
+            pnlTrans.BackColor = colorHoverInventario;
+        }
+
+        private void pnlTrans_MouseLeave(object sender, EventArgs e)
+        {
+            pnlTrans.BackColor = colorNormalInventario;
+        }
+
+        private void pnlPD_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmPaqueteDetalle obj = new frmPaqueteDetalle();
+            obj.Visible = true;
+            Visible = false;
+        }
+
+        private void pnlTrans_MouseClick(object sender, MouseEventArgs e)
+        {
+            frmTransporte obj = new frmTransporte();
+            obj.Visible = true;
+            Visible = false;
         }
     }
 }

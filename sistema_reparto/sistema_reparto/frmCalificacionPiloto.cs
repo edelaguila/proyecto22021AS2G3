@@ -1358,5 +1358,15 @@ namespace sistema_reparto
         {
             Application.Exit();
         }
+
+        private void pnlPD_MouseHover_1(object sender, EventArgs e)
+        {
+            pnlPD.BackColor = colorHoverCalificacion;
+        }
+
+        private void pnlPD_MouseLeave_1(object sender, EventArgs e)
+        {
+            pnlPD.BackColor = colorNormalCalificacion;
+        }
     }
 }
